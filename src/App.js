@@ -32,6 +32,8 @@ import YourTrips from "./screens/YourTrips";
 import Bookings from "./screens/Bookings";
 import ListYourProperty from "./screens/ListYourProperty";
 
+import GrandOpening from "./screens/GrandOpening";
+
 function App() {
   return (
     <Router>
@@ -45,6 +47,17 @@ function App() {
             </Page>
           )}
         />
+
+        <Route
+          exact
+          path="/grand-opening"
+          render={() => (
+            <Page>
+              <GrandOpening />
+            </Page>
+          )}
+        />
+
         <Route
           exact
           path="/stays-category"
