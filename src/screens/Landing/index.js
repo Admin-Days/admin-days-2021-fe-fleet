@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Stays.module.sass";
 import Main from "./Main";
 import Adventure from "../../components/Adventure";
-import Travel from "../../components/Travel";
+import Introduction from "../../components/Introduction";
 import Work from "./Work";
 import Live from "../../components/Live";
 import Catalog from "./Catalog";
@@ -21,8 +21,7 @@ const Home = () => {
   return (
     <>
       <Main />
-      <Adventure />
-      <Travel />
+      <Introduction />
       <Work />
       <Live title="Live anywhere" />
       <Catalog />
