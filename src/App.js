@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "react-dates/lib/css/_datepicker.css";
 import "./styles/app.sass";
 import Page from "./components/Page";
-import Stays from "./screens/Stays";
+import Landing from "./screens/Landing";
 import StaysCategory from "./screens/StaysCategory";
 import StaysProduct from "./screens/StaysProduct";
 import StaysCheckout from "./screens/StaysCheckout";
@@ -41,7 +41,7 @@ function App() {
           path="/"
           render={() => (
             <Page>
-              <Stays />
+              <Landing />
             </Page>
           )}
         />

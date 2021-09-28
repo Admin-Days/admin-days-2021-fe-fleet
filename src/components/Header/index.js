@@ -1,60 +1,53 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Header.module.sass";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Image from "../Image";
 import Dropdown from "./Dropdown";
-import Language from "./Language";
-import Notification from "./Notification";
 import User from "./User";
 import Icon from "../Icon";
 import Modal from "../Modal";
 import Login from "../Login";
+import { useHistory } from "react-router";
+import Logo from "./Logo";
 
-const travelers = [
-  {
-    title: "Stays",
-    url: "/",
-    icon: "comment",
-  },
-  {
-    title: "Flights",
-    url: "/flights",
-    icon: "email",
-  },
-  {
-    title: "Things to do",
-    url: "/things-to-do",
-    icon: "home",
-  },
-  {
-    title: "Cars",
-    url: "/cars",
-    icon: "email",
-  },
-];
 
-const languages = [
+const pages = [
   {
-    title: "English",
-    country: "United States",
+    title: "Home",
     url: "/",
+    icon: "mdHome"
   },
   {
-    title: "Vietnamese",
-    country: "Vietnamese",
-    url: "/",
+    title: "Grand Opening",
+    url: "/grand-opening",
+    icon: "mdCampaign"
+  },
+  // {
+  //   title: "Jobfair",
+  //   url: "/jobfair",
+  //   icon: "mdWork",
+  // },
+  {
+    title: "Webinar",
+    url: "/webinar",
+    icon: "mdCamMic",
   },
   {
-    title: "Français",
-    country: "Belgique",
-    url: "/",
+    title: "Workshop",
+    url: "/workshop",
+    icon: "mdMode",
   },
   {
-    title: "Français",
-    country: "Canada",
-    url: "/",
+    title: "CV Clinic & HRD Discussion Class",
+    url: "/workshop",
+    icon: "mdMessage"
   },
+  // {
+  //   title: "Grand Closing",
+  //   url: "/grand-closing",
+  //   icon: "mdHome",
+  // },
 ];
 
 const items = [
@@ -96,6 +89,11 @@ const items = [
 const Header = ({ separatorHeader, wide, notAuthorized }) => {
   const [visibleNav, setVisibleNav] = useState(false);
   const [visible, setVisible] = useState(false);
+
+  const history = useHistory()
+
+  const currentPage = pages.filter(e => e.url === history.location.pathname)[0]?.title
+
   return (
     <>
       <div
@@ -107,36 +105,16 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
       >
         <div className={cn("container", styles.container)}>
           <Link className={styles.logo} to="/">
-            <Image
-              className={styles.pic}
-              src="/images/logo-dark.svg"
-              srcDark="/images/logo-light.svg"
-              alt="Fleet"
-            />
+            <Logo />
           </Link>
           <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
             <Dropdown
               className={styles.drowdown}
-              items={travelers}
+              items={pages}
+              title={currentPage}
               setValue={setVisibleNav}
             />
-            <NavLink
-              className={styles.link}
-              to="/support"
-              activeClassName={styles.active}
-            >
-              Support
-            </NavLink>
-            <Language className={styles.language} items={languages} />
-            <NavLink
-              className={cn("button-stroke button-small", styles.button)}
-              activeClassName={styles.active}
-              to="/list-your-property"
-            >
-              List your property
-            </NavLink>
           </div>
-          <Notification className={styles.notification} />
           {notAuthorized ? (
             <button className={styles.login} onClick={() => setVisible(true)}>
               <Icon name="user" size="24" />
