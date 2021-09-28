@@ -3,8 +3,6 @@ import cn from "classnames";
 import styles from "./Introduction.module.sass";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import Icon from "../Icon";
-import Image from "../Image";
 
 const items = [
   {
@@ -24,51 +22,6 @@ const items = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eu sit faucibus sed ut mauris.",
     color: "#58C27D",
-  },
-];
-
-const gallery = [
-  {
-    src: "/images/content/travel-pic-1.jpg",
-    srcSet: "/images/content/travel-pic-1@2x.jpg",
-    images: [
-      {
-        src: "/images/content/appraisal-pic-1.png",
-        srcSet: "/images/content/appraisal-pic-1@2x.png",
-        srcDark: "/images/content/appraisal-pic-dark-1.png",
-        srcSetDark: "/images/content/appraisal-pic-dark-1@2x.png",
-      },
-      {
-        src: "/images/content/appraisal-pic-1.png",
-        srcSet: "/images/content/appraisal-pic-1@2x.png",
-        srcDark: "/images/content/appraisal-pic-dark-1.png",
-        srcSetDark: "/images/content/appraisal-pic-dark-1@2x.png",
-      },
-      {
-        src: "/images/content/appraisal-pic-1.png",
-        srcSet: "/images/content/appraisal-pic-1@2x.png",
-        srcDark: "/images/content/appraisal-pic-dark-1.png",
-        srcSetDark: "/images/content/appraisal-pic-dark-1@2x.png",
-      },
-    ],
-  },
-  {
-    src: "/images/content/travel-pic-1.jpg",
-    srcSet: "/images/content/travel-pic-1@2x.jpg",
-    images: [
-      {
-        src: "/images/content/appraisal-pic-1.png",
-        srcSet: "/images/content/appraisal-pic-1@2x.png",
-        srcDark: "/images/content/appraisal-pic-dark-1.png",
-        srcSetDark: "/images/content/appraisal-pic-dark-1@2x.png",
-      },
-      {
-        src: "/images/content/appraisal-pic-1.png",
-        srcSet: "/images/content/appraisal-pic-1@2x.png",
-        srcDark: "/images/content/appraisal-pic-dark-1.png",
-        srcSetDark: "/images/content/appraisal-pic-dark-1@2x.png",
-      },
-    ],
   },
 ];
 
