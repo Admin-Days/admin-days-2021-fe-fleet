@@ -1,6 +1,5 @@
 import React from "react";
 import cn from "classnames";
-import { Link } from "react-router-dom";
 import styles from "./Main.module.sass";
 import Panel from "../../../components/Panel";
 
@@ -27,7 +26,8 @@ const Main = () => {
           classBody={styles.panelBody}
           classButton={styles.panelButton}
           icon="arrow-next"
-          onSearch={() => console.log("Search")}
+          // TODO: Add on join button click.
+          onButtonClick={() => {}}
         >
           <div className={styles.row}>
             <div className={cn("info", styles.panelInfo)}>
