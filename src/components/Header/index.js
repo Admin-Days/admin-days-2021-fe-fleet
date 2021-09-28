@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Header.module.sass";
 import { Link } from "react-router-dom";
-import Image from "../Image";
 import Dropdown from "./Dropdown";
 import User from "./User";
 import Icon from "../Icon";
