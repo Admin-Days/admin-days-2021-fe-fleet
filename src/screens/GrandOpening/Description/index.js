@@ -1,5 +1,5 @@
 import cn from "classnames";
-import styles from "./Planning.module.sass";
+import styles from "./Description.module.sass";
 import Gallery from "../Gallery";
 
 const gallery = [

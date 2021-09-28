@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import styles from "./Live.module.sass";
+import styles from "./Speaker.module.sass";
 import Card from "../Card";
 
 const speakers = [

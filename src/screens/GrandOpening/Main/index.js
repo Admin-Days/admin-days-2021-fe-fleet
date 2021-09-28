@@ -3,7 +3,7 @@ import cn from "classnames";
 import styles from "./Main.module.sass";
 import Panel from "../../../components/Panel";
 
-const Main = () => {
+const Main = ({ onRegister }) => {
   return (
     <div className={cn("section", styles.section)}>
       <div className={cn("container", styles.container)}>
@@ -26,8 +26,7 @@ const Main = () => {
           classBody={styles.panelBody}
           classButton={styles.panelButton}
           icon="arrow-next"
-          // TODO: Add on join button click.
-          onButtonClick={() => {}}
+          onButtonClick={onRegister}
         >
           <div className={styles.row}>
             <div className={cn("info", styles.panelInfo)}>
