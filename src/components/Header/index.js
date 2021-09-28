@@ -9,81 +9,7 @@ import Modal from "../Modal";
 import Login from "../Login";
 import { useHistory } from "react-router";
 import Logo from "./Logo";
-
-
-const pages = [
-  {
-    title: "Home",
-    url: "/",
-    icon: "mdHome"
-  },
-  {
-    title: "Grand Opening",
-    url: "/grand-opening",
-    icon: "mdCampaign"
-  },
-  // {
-  //   title: "Jobfair",
-  //   url: "/jobfair",
-  //   icon: "mdWork",
-  // },
-  {
-    title: "Webinar",
-    url: "/webinar",
-    icon: "mdCamMic",
-  },
-  {
-    title: "Workshop",
-    url: "/workshop",
-    icon: "mdMode",
-  },
-  {
-    title: "CV Clinic & HRD Discussion Class",
-    url: "/workshop",
-    icon: "mdMessage"
-  },
-  // {
-  //   title: "Grand Closing",
-  //   url: "/grand-closing",
-  //   icon: "mdHome",
-  // },
-];
-
-const items = [
-  {
-    menu: [
-      {
-        title: "Messages",
-        icon: "comment",
-        url: "/messages",
-      },
-      {
-        title: "Bookings",
-        icon: "home",
-        url: "/bookings",
-      },
-      {
-        title: "Wishlists",
-        icon: "email",
-        url: "/wishlists",
-      },
-    ],
-  },
-  {
-    menu: [
-      {
-        title: "List your property",
-        icon: "building",
-        url: "/list-your-property",
-      },
-      {
-        title: "Host an experience",
-        icon: "flag",
-        url: "/your-trips",
-      },
-    ],
-  },
-];
+import { pages } from "../../mocks/pages";
 
 const Header = ({ separatorHeader, wide, notAuthorized }) => {
   const [visibleNav, setVisibleNav] = useState(false);
@@ -119,7 +45,7 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
               <Icon name="user" size="24" />
             </button>
           ) : (
-            <User className={styles.user} items={items} />
+            <User className={styles.user} />
           )}
           <button
             className={cn(styles.burger, { [styles.active]: visibleNav })}
