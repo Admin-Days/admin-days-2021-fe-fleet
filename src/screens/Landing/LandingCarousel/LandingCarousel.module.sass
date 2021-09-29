@@ -1,0 +1,55 @@
+@import ../../../styles/helpers
+
+.container
+  margin-top: 6rem
+
+.carousel
+  display: none
+  overflow: hidden
+  padding: 6rem
+  background: #2B243F
+  border: 2px solid #353945
+  box-sizing: border-box
+  box-shadow: 0px 32px 64px -32px rgba(15, 15, 15, 0.1)
+  border-radius: 24px
+  position: relative
+  h3
+    +jost
+    font-weight: 500
+    font-style: normal
+    font-weight: 500
+    font-size: 2.25rem
+    letter-spacing: -0.01em
+    color: white
+    margin-bottom: 2rem
+  p
+    +poppins
+    font-weight: normal
+    font-size: 1.1rem
+    line-height: 1.5rem
+    color: #777E91
+    max-width: 40ch
+    margin-bottom: 1.5rem
+  .ilustration
+    position: absolute
+    bottom: 0
+    &.go
+      right: -2rem
+      width: 36rem
+    &.jf
+      bottom: 0
+      right: 8rem
+      height: 90%
+    &.wb
+      right: 0
+      width: 36rem
+    &.ws
+      right: 2rem
+      width: 32rem
+    &.cv
+      right: 2rem
+      width: 32rem
+  &.active
+    display: flex
+    flex-direction: column
+    align-items: flex-start

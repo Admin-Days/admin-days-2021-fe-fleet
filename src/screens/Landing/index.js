@@ -1,12 +1,7 @@
 import React from "react";
 import styles from "./Landing.module.sass";
 import Main from "./Main";
-import Adventure from "../../components/Adventure";
-import Introduction from "../../components/Introduction";
-import Work from "./Work";
-import Live from "../../components/Live";
-import Catalog from "./Catalog";
-import Planning from "../../components/Planning";
+import Introduction from "./Introduction";
 import Browse from "../../components/Browse";
 import Places from "../../components/Places";
 import Hosts from "../../components/Hosts";
@@ -17,6 +12,7 @@ import Categories from "../../components/Categories";
 import { browse1 } from "../../mocks/browse";
 import { categories1 } from "../../mocks/categories";
 import Quote from "./Quote";
+import LandingCarousel from "./LandingCarousel";
 
 const Home = () => {
   return (
@@ -24,8 +20,7 @@ const Home = () => {
       <Main />
       <Introduction />
       <Quote />
-      <Catalog />
-      <Planning title="Travel to make memories all around the world" />
+      <LandingCarousel />
       <Browse
         classSection="section"
         classTitle="h2"
