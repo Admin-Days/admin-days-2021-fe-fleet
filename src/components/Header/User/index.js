@@ -14,9 +14,9 @@ const User = ({ className, items }) => {
         <button className={styles.head} onClick={() => setVisible(!visible)}>
           <Avatar
             name="Gani Ilham Irsyadi"
-            maxInitials="2"
+            maxInitials={2}
             className={styles.avatar}
-            textSizeRatio="2.4"
+            textSizeRatio={2.4}
             size="40"
             color="#48405F"
             round
