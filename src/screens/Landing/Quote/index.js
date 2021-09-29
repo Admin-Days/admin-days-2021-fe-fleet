@@ -8,8 +8,8 @@ const Quote = () => {
       style={{ backgroundImage: "url(assets/landing-hero-2-full.jpg)" }}
     >
       <h2>
-        <span>"Prepare and reach your limitless</span>
-        <span>career for your bright future"</span>
+        "Prepare and reach your limitless
+        career for your bright future"
       </h2>
     </div>
   );
