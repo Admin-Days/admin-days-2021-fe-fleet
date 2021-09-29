@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Stays.module.sass";
+import styles from "./Landing.module.sass";
 import Main from "./Main";
 import Adventure from "../../components/Adventure";
 import Introduction from "../../components/Introduction";
@@ -16,14 +16,14 @@ import Categories from "../../components/Categories";
 // data
 import { browse1 } from "../../mocks/browse";
 import { categories1 } from "../../mocks/categories";
+import Quote from "./Quote";
 
 const Home = () => {
   return (
     <>
       <Main />
       <Introduction />
-      <Work />
-      <Live title="Live anywhere" />
+      <Quote />
       <Catalog />
       <Planning title="Travel to make memories all around the world" />
       <Browse
