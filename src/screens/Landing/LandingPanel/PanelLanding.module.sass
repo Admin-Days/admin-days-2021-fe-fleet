@@ -51,7 +51,7 @@
     .titleText
         p
             +dm-sans
-            font-size: 1rem
+            font-size: 1.2rem
             padding-bottom: calc(0.75rem - 1px)
             text-align: center
     .horizontalLine
@@ -72,6 +72,7 @@
     z-index: 3
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    column-gap: 2rem
     +m
         grid-template-columns: repeat(2, 1fr)
         margin-top: 3rem
@@ -79,6 +80,8 @@
         display: flex
         align-items: center
         flex-direction: column
+        color: white
+        width: fit-content
         +m
             margin-bottom: 2rem
         img

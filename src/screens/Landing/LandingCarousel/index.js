@@ -3,6 +3,7 @@ import styles from "./LandingCarousel.module.sass";
 import cn from "classnames";
 import { pages } from "../../../mocks/pages";
 import { Link } from "react-router-dom";
+import Icon from "../../../components/Icon";
 
 const LandingCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -11,7 +12,7 @@ const LandingCarousel = () => {
     <div className={cn("section", styles.container)}>
       <div className="container">
         {pages
-          .filter((e) => e.desc)
+          .filter((e) => e.ilustration)
           .map((e, i) => (
             <div
               key={e.id}
@@ -19,15 +20,9 @@ const LandingCarousel = () => {
                 [styles.active]: activeIndex === i,
               })}
             >
-              <h3>
-                {e.id !== "cv" ? (
-                  e.title
-                ) : (
-                  <span>
-                    CV Clinic & <br /> HRD Discussion Class
-                  </span>
-                )}
-              </h3>
+              <h3
+                dangerouslySetInnerHTML={{ __html: e.titleHTML ?? e.title }}
+              ></h3>
               <p>{e.desc}</p>
               <Link className={cn("button", styles.button)} to={e.url}>
                 Learn more
@@ -39,7 +34,16 @@ const LandingCarousel = () => {
               />
             </div>
           ))}
-          
+        <div className={styles.buttonWrapper}>
+          {pages
+            .filter((e) => e.ilustration)
+            .map((e,i) => (
+              <button onClick={() => setActiveIndex(i)} className={cn(styles.button, {[styles.active]: activeIndex === i})}>
+                <Icon name={e.icon} size={28} className={styles.icon} />
+                <span>{e.title}</span>
+              </button>
+            ))}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "./PanelLanding.module.sass";
 import { pages } from "../../../mocks/pages";
 
@@ -17,10 +17,10 @@ const PanelLanding = ({ className, classBody }) => {
       </div>
       <div className={cn(styles.body, classBody)}>
         {pages.filter(e => e.images).map((e) => (
-          <div key={e.title} className={styles.eventLogo}>
+          <Link key={e.title} className={styles.eventLogo} to={e.url}>
             <img src={e.images} alt={e.title} />
             <p>{e.title}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
