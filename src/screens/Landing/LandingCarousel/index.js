@@ -7,13 +7,11 @@ import Icon from "../../../components/Icon";
 
 const LandingCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const content = pages.filter((e) => e.ilustration)
   return (
     <div className={cn("section", styles.container)}>
       <div className="container">
-        {pages
-          .filter((e) => e.ilustration)
-          .map((e, i) => (
+        {content.map((e, i) => (
             <div
               key={e.id}
               className={cn(styles.carousel, {
@@ -35,14 +33,38 @@ const LandingCarousel = () => {
             </div>
           ))}
         <div className={styles.buttonWrapper}>
-          {pages
-            .filter((e) => e.ilustration)
-            .map((e,i) => (
-              <button onClick={() => setActiveIndex(i)} className={cn(styles.button, {[styles.active]: activeIndex === i})}>
+          {content.map((e, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={cn(styles.button, {
+                  [styles.active]: activeIndex === i,
+                })}
+              >
                 <Icon name={e.icon} size={28} className={styles.icon} />
                 <span>{e.title}</span>
               </button>
             ))}
+        </div>
+        <div className={styles.nextPrevWrapper}>
+          <button
+            onClick={() =>
+              setActiveIndex(activeIndex - 1 > 0 ? activeIndex - 1 : content.length - 1)
+            }
+          >
+            <Icon name="arrow-prev" className={styles.arrow} size="14" />
+          </button>
+          <button
+            onClick={() =>
+              setActiveIndex(
+                activeIndex + 1 < content.length - 1
+                  ? activeIndex + 1
+                  : 0
+              )
+            }
+          >
+            <Icon name="arrow-next" className={styles.arrow} size="14" />{" "}
+          </button>
         </div>
       </div>
     </div>
