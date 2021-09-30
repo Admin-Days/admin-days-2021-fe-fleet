@@ -19,7 +19,8 @@
     +t
         align-items: flex-start
     +m
-        display: block
+        flex-direction: column-reverse
+        justify-content: center
 
 .col
     &:first-child
@@ -35,6 +36,8 @@
             margin-top: 4rem
             width: 40%
         +m
+            margin-top: 0
+            margin-bottom: 2rem
             width: 100%
 
 .list
@@ -67,8 +70,14 @@
 
 .gallery
     position: relative
+    +m
+        display: flex
+        width: 100%
+        justify-content: center
     img
         width: 100%
+        +m
+            max-width: 20rem
 
 .bg
     overflow: hidden

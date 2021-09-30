@@ -1,7 +1,6 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Introduction.module.sass";
-import { Link } from "react-router-dom";
 
 const items = [
   {

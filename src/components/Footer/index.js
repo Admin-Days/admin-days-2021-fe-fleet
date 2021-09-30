@@ -11,11 +11,11 @@ const Footer = () => {
         <picture>
           <source
             media="(max-width:576px)"
-            srcset="/assets/landing-media-partners-sm.png"
+            srcSet="/assets/landing-media-partners-sm.png"
           />
           <source
             media="(max-width:768px)"
-            srcset="/assets/landing-media-partners-md.png"
+            srcSet="/assets/landing-media-partners-md.png"
           />
           <img
             className={styles.partners}
