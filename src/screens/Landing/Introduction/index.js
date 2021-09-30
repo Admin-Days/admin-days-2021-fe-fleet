@@ -7,19 +7,19 @@ const items = [
   {
     title: "Who we are",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper nec in et consequat.",
+      "We are students of the University of Indonesia's Faculty of Administrative Sciences",
     color: "#8BC5E5",
   },
   {
     title: "The story of Admin Days",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget in quis dignissim massa in.",
+      "Admin Days is the first anual event held by FIA dedicated to embody our department's strengths and goals.",
     color: "#92A5EF",
   },
   {
     title: "Our mission",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eu sit faucibus sed ut mauris.",
+      "The purpose of holding Administration Days is to assist students in understanding themselves and their environment in making decisions, planning, and directing activities that lead to careers that are by the potential of each student, as well as assisting in improving soft skills students when entering the world of work later.",
     color: "#58C27D",
   },
 ];
@@ -50,18 +50,20 @@ const Introduction = () => {
                 </div>
               ))}
             </div>
-            <Link className={cn("button", styles.button)} to="/stays-category">
+            <a
+              className={cn("button", styles.button)}
+              href="https://bem.fia.ui.ac.id/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Get to know us better
-            </Link>
+            </a>
           </div>
           <div className={styles.col}>
             <div className={styles.wrapper}>
               <div className={styles.gallery}>
                 <div className={cn("travel-bg", styles.bg)}>
-                  <img
-                    src="/assets/landing-fia-students.jpg"
-                    alt="FIA Student"
-                  />
+                  <img src="/assets/landing-big-logo.png" alt="FIA Student" />
                 </div>
               </div>
             </div>

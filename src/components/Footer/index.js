@@ -7,18 +7,22 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={cn("container", styles.container)}>
-        <h4 className={styles.title}>Brought to you by</h4>
-        <div className={styles.logoWrapper}>
-          {sponsorLogos.map((e, i) => (
-            <img key={i} className={styles.logo} src={e} alt="sponsor" />
-          ))}
-        </div>
-        <h5 className={styles.subTitle}>Media Partners</h5>
-        <div className={styles.logoWrapper}>
-          {sponsorLogos.map((e, i) => (
-            <img key={i} className={styles.logo} src={e} alt="sponsor" />
-          ))}
-        </div>
+        <h4 className={styles.title}>Media Partners</h4>
+        <picture>
+          <source
+            media="(max-width:576px)"
+            srcset="/assets/landing-media-partners-sm.png"
+          />
+          <source
+            media="(max-width:768px)"
+            srcset="/assets/landing-media-partners-md.png"
+          />
+          <img
+            className={styles.partners}
+            src="/assets/landing-media-partners.png"
+            alt="media-partners"
+          />
+        </picture>
       </div>
       <div className={styles.bottom}>
         <div className={styles.copyright}>
