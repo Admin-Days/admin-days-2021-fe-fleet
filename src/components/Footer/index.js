@@ -1,35 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
-import { Link } from "react-router-dom";
-import Image from "../Image";
-import Icon from "../Icon";
-import Theme from "../Theme";
-import Form from "../Form";
 import { sponsorLogos } from "../../mocks/sponsors";
-
-const items = [
-  {
-    title: "Stays",
-    url: "/",
-  },
-  {
-    title: "Flights",
-    url: "/flights",
-  },
-  {
-    title: "Support",
-    url: "/support",
-  },
-  {
-    title: "Cars",
-    url: "/cars",
-  },
-  {
-    title: "Things to do",
-    url: "/things-to-do",
-  },
-];
 
 const Footer = () => {
   return (
