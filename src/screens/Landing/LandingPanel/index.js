@@ -17,10 +17,10 @@ const PanelLanding = ({ className, classBody }) => {
       </div>
       <div className={cn(styles.body, classBody)}>
         {pages.filter(e => e.images).map((e) => (
-          <Link key={e.title} className={styles.eventLogo} to={e.url}>
+          <div key={e.title} className={styles.eventLogo}>
             <img src={e.images} alt={e.title} />
             <p>{e.title}</p>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
