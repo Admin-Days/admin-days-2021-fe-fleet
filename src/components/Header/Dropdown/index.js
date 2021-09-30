@@ -5,7 +5,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { NavLink } from "react-router-dom";
 import Icon from "../../Icon";
 
-const Dropdown = ({ className, items, setValue }) => {
+const Dropdown = ({ className, title, items, setValue }) => {
   const [visible, setVisible] = useState(false);
 
   const handleClick = (x) => {
@@ -19,7 +19,7 @@ const Dropdown = ({ className, items, setValue }) => {
         className={cn(className, styles.dropdown, { [styles.active]: visible })}
       >
         <button className={styles.head} onClick={() => setVisible(!visible)}>
-          <div className={styles.text}>Travelers</div>
+          <div className={styles.text}>{title}</div>
           <Icon name="arrow-down" size="24" />
         </button>
         <div className={styles.body}>

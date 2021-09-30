@@ -1,0 +1,42 @@
+@import ../../../styles/helpers
+
+.container
+  position: relative
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 18rem
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  +m
+    min-height: 12rem
+  +s
+    min-height: 10rem
+  img
+    width: 100%
+  h2
+    position: absolute
+    padding: 2rem 
+    text-align: center
+    max-width: 28ch
+    width: 100%
+    +jost
+    font-weight: 500
+    font-size: 3rem
+    color: #FFD5CF
+    +w
+      font-size: 4rem
+    +t
+      font-size: 3rem
+    +m
+      font-size: 2.25rem
+      padding: 1rem
+    +a
+      font-size: 1.8rem
+    +s
+      font-size: 1.4rem
+    &::first-line
+      color: #DF6F61 !important    
