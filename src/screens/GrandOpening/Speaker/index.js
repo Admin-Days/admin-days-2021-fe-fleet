@@ -29,7 +29,7 @@ const Speaker = ({ title }) => {
         <div className={styles.head}>
           <h2 className={cn("h2", styles.title)}>{title}</h2>
           <div className={cn("info", styles.info)}>
-            The spectacular speakers welcoming you to Admin Days
+            The spectacular speakers welcoming you to ADM Days
           </div>
         </div>
         <div className={styles.wrapper}>

@@ -10,7 +10,7 @@ const items = [
     color: "#8BC5E5",
   },
   {
-    title: "The story of Admin Days",
+    title: "The story of ADM Days",
     content:
       "Admin Days is the first anual event held by FIA dedicated to embody our department's strengths and goals.",
     color: "#92A5EF",
@@ -30,7 +30,7 @@ const Introduction = () => {
         <div className={styles.head}>
           <h2 className={cn("h2", styles.title)}>Let's introduce ourselves</h2>
           <div className={cn("info", styles.info)}>
-            Say hello to the magic behind Admin Days
+            Say hello to the magic behind ADM Days
           </div>
         </div>
         <div className={styles.row}>
@@ -51,7 +51,7 @@ const Introduction = () => {
             </div>
             <a
               className={cn("button", styles.button)}
-              href="https://bem.fia.ui.ac.id/"
+              href="https://bemfiaui.com/"
               target="_blank"
               rel="noreferrer"
             >

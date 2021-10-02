@@ -8,13 +8,13 @@ const Logo = () => {
       <img
         className={cn(styles.logo, styles.bemLogo)}
         src="/assets/navbar-bem-logo.svg"
-        alt="logo bem FIA"
+        alt="BEM FIA Logo"
       />
       <div className={cn(styles.divider)}></div>
       <img
         className={cn(styles.logo, styles.admDaysLogo)}
         src="/assets/navbar-adm-days-logo.svg"
-        alt="logo Admin Days"
+        alt="ADM Days Logo"
       />
     </div>
   );
