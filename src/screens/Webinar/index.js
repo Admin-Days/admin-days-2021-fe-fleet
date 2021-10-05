@@ -14,6 +14,7 @@ import Modal from "../../components/Modal";
 import Register from "../GrandOpening/Register";
 import Loader from "../../components/Loader";
 import Speaker from "./Speaker";
+import Work from "./Work";
 
 initializeApp(firebaseConfig);
 const db = getFirestore();
@@ -56,8 +57,8 @@ const Webinar = () => {
           setVisible(!registered);
         }}
       />
-
       <Speaker />    
+      <Work />
 
       <Modal visible={visible} onClose={() => setVisible(false)}>
         <Register onRegister={onRegister} />
