@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import styles from "./Main.module.sass";
+import styles from "../../GrandOpening/Main/Main.module.sass";
 import Panel from "../../../components/Panel";
 
 const Main = ({ onRegister }) => {
@@ -13,15 +13,17 @@ const Main = ({ onRegister }) => {
             <img src="/assets/go-hero.jpg" alt="Main" />
           </picture>
           <div className={styles.wrap}>
-            <h1 className={cn("hero", styles.title)}>Grand Opening</h1>
+            <h1 className={cn("hero", styles.title)}>Webinar</h1>
             <div className={cn("info", styles.info)}>
-              Every grand event needs a<br />
-              grand opening
+              Sit back and listen to prominent speakers
             </div>
           </div>
         </div>
 
         <Panel
+          className={styles.panel}
+          classBody={styles.panelBody}
+          classButton={styles.panelButton}
           icon="arrow-next"
           onButtonClick={onRegister}
         >

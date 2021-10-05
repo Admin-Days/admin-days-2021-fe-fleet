@@ -9,6 +9,7 @@ import Landing from "./screens/Landing";
 import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
+import Webinar from "./screens/Webinar";
 
 initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -27,13 +28,21 @@ function App() {
             </Page>
           )}
         />
-
         <Route
           exact
           path="/grand-opening"
           render={() => (
             <Page>
               <GrandOpening />
+            </Page>
+          )}
+        />
+         <Route
+          exact
+          path="/webinar"
+          render={() => (
+            <Page>
+              <Webinar />
             </Page>
           )}
         />
