@@ -10,9 +10,11 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
+
 import Modal from "../../components/Modal";
-import Register from "../GrandOpening/Register";
 import Loader from "../../components/Loader";
+
+import Register from "./Register";
 import Speaker from "./Speaker";
 import Work from "./Work";
 
@@ -37,7 +39,7 @@ const Webinar = () => {
         phoneNumber: noTelp,
         organization: institusi,
         registationTimeStamp: serverTimestamp(),
-        eventId: "events/GRAND_OPENING",
+        eventId: "events/WEBINAR",
       });
       setRegistered(true);
 
