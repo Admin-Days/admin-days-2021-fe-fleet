@@ -16,6 +16,7 @@ const Gallery = ({ name, role, datetime, image }) => {
         <p>speaking on</p>
         <div>
           <span>{getDateAndMonth(datetime)}</span>
+          {' '}
           <span>{getTime(datetime, "WIB")}</span>
         </div>
       </div>
