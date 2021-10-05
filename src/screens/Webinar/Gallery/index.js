@@ -14,11 +14,10 @@ const Gallery = ({ name, role, datetime, image }) => {
       </div>
       <div className={styles.info}>
         <p>speaking on</p>
-        <span>
-          {getDateAndMonth(datetime)}
-          <br />
-          {getTime(datetime, "WIB")}
-        </span>
+        <div>
+          <span>{getDateAndMonth(datetime)}</span>
+          <span>{getTime(datetime, "WIB")}</span>
+        </div>
       </div>
     </div>
   );
