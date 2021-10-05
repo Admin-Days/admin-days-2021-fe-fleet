@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./GrandOpening.module.sass";
-import Main from "./Main";
+import Main from "../../components/Main";
 import Speaker from "./Speaker";
 import Description from "./Description";
 import Loader from "../../components/Loader";
