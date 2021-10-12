@@ -1,90 +1,50 @@
 @import ../../styles/helpers
 
 .footer
-    border-top: 1px solid $n6
-    +dark
-        border-color: $n2
-
-.row
-    display: flex
-    padding: 80px 0 48px
-    +m
-        display: block
-        padding-top: 64px
-
-.col
-    &:first-child
-        display: flex
-        flex-direction: column
-        align-items: flex-start
-        width: 256px
-        +m
-            flex-direction: row
-            width: 100%
-            margin-bottom: 48px
-    &:nth-child(2)
-        flex-grow: 1
-        padding: 0 16px
-        +m
-            margin-bottom: 48px
-            padding: 0
-    &:nth-child(3)
-        width: 256px
-        +m
-            width: 100%
-
-.logo
-    margin: -8px 0 16px
-    +m
-        margin-right: auto
-
-.box
-    display: flex
-    align-items: center
-    +button-2
-    color: $n4
-    & > span
-        margin-right: 8px
-    svg
-        margin-right: 8px
-        fill: $n4
-
-.menu
-    display: flex
-    flex-wrap: wrap
-    margin-top: -32px
-    +m
-        margin: -32px -16px 0
-
-.link
-    flex: 0 0 calc(33.333% - 32px)
-    width: calc(33.333% - 32px)
-    margin: 32px 16px 0
-    +button-2
-    color: $n4
-    transition: color .2s
-    +t
-        flex: 0 0 calc(50% - 32px)
-        width: calc(50% - 32px)
-    &:hover
-        color: $n2
-        +dark
-            color: $n6
-    &:nth-child(3)
+    margin-top: 4rem
+    .title
+        text-align: center
+        margin-bottom: 3rem
+        +dm-sans
+        font-weight: bold
+        color: #FCFCFD
+        font-size: 2.5rem
         +t
-            order: 5
-
-.info
-    margin-bottom: 16px
-    +hairline-2
+            font-size: 2rem
+    .subTitle
+        margin: 4rem 0 2rem 0
+        font-weight: normal
+        font-size: 1.5rem
+        line-height: 2rem
+        text-align: center
+        letter-spacing: -0.01em
+        color: #777E91
+        +t
+            font-size: 1.2rem
+    .logoWrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-bottom: 3rem
+        .logo
+            width: 6rem
+            margin: 2rem
+            +m
+                width: 3rem
+                margin: 1rem
 
 .bottom
-    padding: 24px 0
+    margin-top: 6rem
+    padding: 24px
     border-top: 1px solid $n7
     +dark
         border-color: $n2
 
 .copyright
     +caption-2
+    text-align: center
     +dark
         color: $n4
+
+.partners
+    width: 100%

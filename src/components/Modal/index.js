@@ -23,15 +23,15 @@ const Modal = ({ outerClassName, visible, onClose, children }) => {
     };
   }, [escFunction]);
 
-  const scrollRef = useRef(null);
+  const scrollRef = document.getElementById("scroll-ref-id");
 
   useEffect(() => {
     visible ? disableBodyScroll(scrollRef) : enableBodyScroll(scrollRef);
-  }, [visible]);
+  }, [visible, scrollRef]);
 
   return createPortal(
     visible && (
-      <div className={styles.modal} ref={scrollRef}>
+      <div className={styles.modal} id="scroll-ref-id">
         <div className={cn(styles.outer, outerClassName)}>
           <OutsideClickHandler onOutsideClick={onClose}>
             {children}
