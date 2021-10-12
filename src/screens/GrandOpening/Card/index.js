@@ -15,7 +15,7 @@ const Item = ({ className, item, row, car }) => {
       to={item.url}
     >
       <div className={styles.preview}>
-        <img srcSet={`${item.srcSet} 2x`} src={item.src} alt="Speaker" />
+        <img  srcSet={`${item.srcSet} 2x`} src={item.src} alt="Speaker" />
       </div>
 
       <div className={styles.body}>
@@ -29,14 +29,6 @@ const Item = ({ className, item, row, car }) => {
               {x.title}
             </div>
           ))}
-        </div>
-
-        <div className={styles.foot}>
-          {item.comment && (
-            <div className={styles.comment}>
-              <div className={styles.text}>{item.comment}</div>
-            </div>
-          )}
         </div>
       </div>
     </Link>

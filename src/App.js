@@ -15,16 +15,6 @@ initializeApp(firebaseConfig);
 const auth = getAuth();
 signInAnonymously(auth);
 
-import GrandOpening from "./screens/GrandOpening";
-
-import firebaseConfig from "./utils/firebaseConfig";
-import { initializeApp } from "firebase/app";
-import { getAuth, signInAnonymously } from "firebase/auth";
-
-initializeApp(firebaseConfig);
-const auth = getAuth();
-signInAnonymously(auth);
-
 function App() {
   return (
     <Router>

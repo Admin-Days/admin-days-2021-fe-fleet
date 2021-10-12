@@ -3,10 +3,10 @@ import styles from "./Description.module.sass";
 import Gallery from "../Gallery";
 
 const gallery = [
-  "/images/content/photo-3.1.jpg",
-  "/images/content/photo-3.2.jpg",
-  "/images/content/photo-3.3.jpg",
-  "/images/content/photo-3.4.jpg",
+  "/assets/go-gallery-1.png",
+  "/assets/go-gallery-2.png",
+  "/assets/go-gallery-3.png",
+  "/assets/go-gallery-4.png",
 ];
 
 const Description = ({ classSection }) => {
