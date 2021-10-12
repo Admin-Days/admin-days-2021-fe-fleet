@@ -5,20 +5,22 @@ import Card from "../Card";
 
 const speakers = [
   {
-    title: "Tim Cook",
-    options: [{ title: "CEO of Apple" }],
-    src: "/images/content/card-pic-1.jpg",
-    srcSet: "/images/content/card-pic-1@2x.jpg",
-    comment:
-      "Tim Cook’s here and ready to talk about the diverse world of management in the digital era. Tune in as he shares his exclusive tips and tricks to success in this growing market.",
+    title: "Ichwan Sukardi",
+    options: [{ title: "Managing Partner - Tax RSM Indonesia" }],
+    src: "/assets/go-speaker-ichwan.jpg",
+    srcSet: "/assets/go-speaker-ichwan.jpg",
   },
   {
-    title: "Tim Cook",
-    options: [{ title: "CEO of Apple" }],
-    src: "/images/content/card-pic-1.jpg",
-    srcSet: "/images/content/card-pic-1@2x.jpg",
-    comment:
-      "Tim Cook’s here and ready to talk about the diverse world of management in the digital era. Tune in as he shares his exclusive tips and tricks to success in this growing market.",
+    title: "Rini Riyanti",
+    options: [{ title: "Founder and Director of Tiga Enterprise and 8 Dimensi" }],
+    src: "/assets/go-speaker-rini.jpg",
+    srcSet: "/assets/go-speaker-rini.jpg",
+  },
+  {
+    title: "Herry Budhiazhari Salim",
+    options: [{ title: "Vice President and Head of Walt Disney Business Development Indonesia" }],
+    src: "/assets/go-speaker-herry.jpg",
+    srcSet: "/assets/go-speaker-herry.jpg",
   },
 ];
 
