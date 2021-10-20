@@ -10,12 +10,26 @@ import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
 import Webinar from "./screens/Webinar";
+import { useEffect } from "react";
 
 initializeApp(firebaseConfig);
 const auth = getAuth();
 signInAnonymously(auth);
 
 function App() {
+
+  useEffect(() => {
+    var classNameDark = "dark-mode";
+    var classNameLight = "light-mode";
+
+    function setDarkMode() {
+      document.body.classList.remove(classNameLight);
+      document.body.classList.add(classNameDark);
+    }
+
+    setDarkMode()
+  }, [])
+
   return (
     <Router>
       <Switch>
