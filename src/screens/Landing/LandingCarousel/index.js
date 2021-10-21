@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import styles from "./LandingCarousel.module.sass";
+import { useHistory } from "react-router";
+
 import cn from "classnames";
+import styles from "./LandingCarousel.module.sass";
+
 import { pages } from "../../../mocks/pages";
-import { Link } from "react-router-dom";
 import Icon from "../../../components/Icon";
 import Modal from "../../../components/Modal";
 
@@ -11,6 +13,15 @@ const LandingCarousel = () => {
   const [showModal, setShowModal] = useState(false);
 
   const content = pages.filter((e) => e.ilustration);
+  
+  const history = useHistory()
+  const handleLearnMore = () => {
+    if (activeIndex === 0) {
+      history.push("/grand-opening")
+    } else {
+      setShowModal(true)
+    }
+  }
 
   return (
     <div className={cn("section", styles.container)}>
@@ -38,7 +49,7 @@ const LandingCarousel = () => {
             ></h3>
             <p>{e.desc}</p>
             <button
-              onClick={() => setShowModal(true)}
+              onClick={handleLearnMore}
               className={cn("button", styles.button)}
             >
               Learn more

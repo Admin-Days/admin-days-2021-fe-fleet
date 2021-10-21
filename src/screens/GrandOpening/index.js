@@ -36,7 +36,7 @@ const GrandOpening = () => {
         email: email,
         phoneNumber: noTelp,
         organization: institusi,
-        registationTimeStamp: serverTimestamp(),
+        registrationTimeStamp: serverTimestamp(),
         eventId: "events/GRAND_OPENING",
       });
       setRegistered(true);

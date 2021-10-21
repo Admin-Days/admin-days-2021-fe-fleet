@@ -35,7 +35,7 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
           <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
             <Dropdown
               className={styles.drowdown}
-              items={pages.filter(e => e.title === "Home")}
+              items={pages.filter(e => e.title === "Home" || e.title === "Grand Opening")}
               title={currentPage}
               setValue={setVisibleNav}
             />
