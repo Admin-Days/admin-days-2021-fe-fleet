@@ -38,7 +38,7 @@ const Webinar = () => {
         email: email,
         phoneNumber: noTelp,
         organization: institusi,
-        registationTimeStamp: serverTimestamp(),
+        registrationTimeStamp: serverTimestamp(),
         eventId: `events/WEBINAR_${webinarNumber}`,
       });
       setRegistered(true);

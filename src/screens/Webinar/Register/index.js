@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Register.module.sass";
+
+import Dropdown from "../../../components/Dropdown";
 import TextInput from "../../../components/TextInput";
 
 const Register = ({ onRegister }) => {
@@ -9,9 +11,16 @@ const Register = ({ onRegister }) => {
   const [noTelp, setNoTelp] = useState("");
   const [institusi, setInstitusi] = useState("");
 
+  const webinars = [
+    "Webinar 1: Money Management",
+    "Webinar 2: Master Or Job",
+    "Webinar 3: Post-Graduate Plan",
+  ];
+  const [webinar, setWebinar] = useState(webinars[0]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    onRegister({ nama, email, noTelp, institusi });
+    onRegister({ nama, email, noTelp, institusi, webinarNumber: parseInt(webinar[8]) });
   };
 
   return (
@@ -24,6 +33,8 @@ const Register = ({ onRegister }) => {
         </div>
 
         <form className={styles.fieldset} onSubmit={handleSubmit}>
+          <Dropdown value={webinar} setValue={setWebinar} options={webinars} />
+
           <TextInput
             className={styles.field}
             label="Nama Lengkap"
