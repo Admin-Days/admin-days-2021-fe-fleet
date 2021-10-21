@@ -15,9 +15,11 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
   const [visibleNav, setVisibleNav] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  const history = useHistory()
+  const history = useHistory();
 
-  const currentPage = pages.filter(e => e.url === history.location.pathname)[0]?.title
+  const currentPage = pages.filter(
+    (e) => e.url === history.location.pathname
+  )[0]?.title;
 
   return (
     <>
@@ -35,7 +37,12 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
           <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
             <Dropdown
               className={styles.drowdown}
-              items={pages.filter(e => e.title === "Home" || e.title === "Grand Opening")}
+              items={pages.filter(
+                (e) =>
+                  e.title === "Home" ||
+                  e.title === "Grand Opening" ||
+                  e.title === "Webinar"
+              )}
               title={currentPage}
               setValue={setVisibleNav}
             />

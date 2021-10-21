@@ -29,7 +29,7 @@ const Webinar = () => {
   // State for registration form.
   const [registered, setRegistered] = useState(false);
 
-  const onRegister = async ({ nama, email, noTelp, institusi }) => {
+  const onRegister = async ({ nama, email, noTelp, institusi, webinarNumber }) => {
     setLoading(true);
 
     try {
@@ -39,7 +39,7 @@ const Webinar = () => {
         phoneNumber: noTelp,
         organization: institusi,
         registationTimeStamp: serverTimestamp(),
-        eventId: "events/WEBINAR",
+        eventId: `events/WEBINAR_${webinarNumber}`,
       });
       setRegistered(true);
 
