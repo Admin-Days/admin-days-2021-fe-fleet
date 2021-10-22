@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import styles from "../../GrandOpening/Main/Main.module.sass";
+import styles from "./Main.module.sass";
 import Panel from "../../../components/Panel";
 
 const Main = ({ onRegister }) => {
