@@ -6,8 +6,6 @@ import Image from "../../../components/Image";
 const items = [
   {
     title: "Fixed Schedule",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel proin nam ut id eu lectus feugiat tempor. ",
     src: "/images/content/work-pic-1.png",
     srcSet: "/images/content/work-pic-1@2x.png",
     srcDark: "/images/content/work-pic-dark-1.png",
@@ -15,8 +13,6 @@ const items = [
   },
   {
     title: "Informative",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel proin nam ut id eu lectus feugiat tempor. ",
     src: "/images/content/work-pic-2.png",
     srcSet: "/images/content/work-pic-2@2x.png",
     srcDark: "/images/content/work-pic-dark-2.png",
@@ -24,8 +20,6 @@ const items = [
   },
   {
     title: "Free!",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel proin nam ut id eu lectus feugiat tempor. ",
     src: "/images/content/work-pic-3.png",
     srcSet: "/images/content/work-pic-3@2x.png",
     srcDark: "/images/content/work-pic-dark-3.png",
