@@ -18,7 +18,9 @@ const LandingCarousel = () => {
   const handleLearnMore = () => {
     if (activeIndex === 0) {
       history.push("/grand-opening")
-    } else {
+    } else if (activeIndex === 1) {
+      history.push("/webinar")
+    } else{
       setShowModal(true)
     }
   }
