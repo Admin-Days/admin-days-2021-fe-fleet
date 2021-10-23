@@ -21,15 +21,28 @@ import Work from "./Work";
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
+const webinarLinks = {
+  1: "https://bit.ly/WebinarMoneyManagement2021",
+  2: "https://bit.ly/WebinarMasterOrJob2021",
+  3: "https://bit.ly/WebinarPostGraduatePlan2021",
+};
+
 const Webinar = () => {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [webinarLink, setWebinarLink] = useState("");
 
   // State for registration form.
   const [registered, setRegistered] = useState(false);
 
-  const onRegister = async ({ nama, email, noTelp, institusi, webinarNumber }) => {
+  const onRegister = async ({
+    nama,
+    email,
+    noTelp,
+    institusi,
+    webinarNumber,
+  }) => {
     setLoading(true);
 
     try {
@@ -43,7 +56,10 @@ const Webinar = () => {
       });
       setRegistered(true);
 
+      setWebinarLink(webinarLinks[webinarNumber]);
       setSuccess(true);
+      navigator.clipboard.writeText(webinarLinks[webinarNumber])
+
       setLoading(false);
       setVisible(false);
     } catch (e) {
@@ -59,7 +75,7 @@ const Webinar = () => {
           setVisible(!registered);
         }}
       />
-      <Speaker />    
+      <Speaker />
       <Work />
 
       <Modal visible={visible} onClose={() => setVisible(false)}>
@@ -74,7 +90,21 @@ const Webinar = () => {
       </Modal>
 
       <Modal visible={success} onClose={() => setSuccess(false)}>
-        <h1>Successfully Registered!</h1>
+        <div className={styles.success}>
+          <h1 className={styles.successHeader}>Successfully Registered!</h1>
+
+          <p className={styles.successDescription}>
+            Please join to the Whatsapp group on:
+          </p>
+
+          <a href={webinarLink} className={styles.successLink}>
+            {webinarLink}
+          </a>
+
+          <p className={styles.successDescription}>
+            Link is copied to clipboard!
+          </p>
+        </div>
       </Modal>
     </>
   );
