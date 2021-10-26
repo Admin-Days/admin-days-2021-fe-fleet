@@ -1,7 +1,6 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
-import { sponsorLogos } from "../../mocks/sponsors";
 
 const Footer = () => {
   return (
@@ -11,15 +10,15 @@ const Footer = () => {
         <picture>
           <source
             media="(max-width:576px)"
-            srcSet="/assets/landing-media-partners-sm.png"
+            srcSet="/assets/landing-media-partners-sm.jpg"
           />
           <source
             media="(max-width:768px)"
-            srcSet="/assets/landing-media-partners-md.png"
+            srcSet="/assets/landing-media-partners-md.jpg"
           />
           <img
             className={styles.partners}
-            src="/assets/landing-media-partners.png"
+            src="/assets/landing-media-partners.jpg"
             alt="media-partners"
           />
         </picture>
