@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Webinar.module.sass";
 import Main from "./Main";
 
@@ -17,6 +17,7 @@ import Loader from "../../components/Loader";
 import Register from "./Register";
 import Speaker from "./Speaker";
 import Work from "./Work";
+import { setDarkMode } from "../../utils/dark";
 
 initializeApp(firebaseConfig);
 const db = getFirestore();
@@ -28,6 +29,11 @@ const webinarLinks = {
 };
 
 const Webinar = () => {
+
+  useEffect(() => {
+    setDarkMode()
+  }, []);
+
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);

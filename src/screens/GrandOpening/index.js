@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./GrandOpening.module.sass";
 import Main from "./Main";
 import Speaker from "./Speaker";
@@ -15,11 +15,18 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import { setDarkMode } from "../../utils/dark";
 
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
-const GrandOpening = () => {
+const GrandOpening = ({location}) => {
+
+  // Darkmode
+  useEffect(() => {
+    setDarkMode()
+  }, []);
+
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);

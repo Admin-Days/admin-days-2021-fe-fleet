@@ -17,18 +17,6 @@ const auth = getAuth();
 signInAnonymously(auth);
 
 function App() {
-  useEffect(() => {
-    var classNameDark = "dark-mode";
-    var classNameLight = "light-mode";
-
-    function setDarkMode() {
-      document.body.classList.remove(classNameLight);
-      document.body.classList.add(classNameDark);
-    }
-
-    setDarkMode();
-  }, []);
-
   return (
     <Router>
       <Switch>
