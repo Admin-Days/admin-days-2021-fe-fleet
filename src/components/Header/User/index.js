@@ -5,7 +5,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import styles from "./User.module.sass";
 import Avatar from "react-avatar";
 
-const User = ({ className, items }) => {
+const User = ({ className, username }) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ const User = ({ className, items }) => {
       <div className={cn(styles.user, className, { [styles.active]: visible })}>
         <button className={styles.head} onClick={() => setVisible(!visible)}>
           <Avatar
-            name="Gani Ilham Irsyadi"
+            name={username}
             maxInitials={2}
             className={styles.avatar}
             textSizeRatio={2.4}
@@ -22,6 +22,7 @@ const User = ({ className, items }) => {
             round
           />
         </button>
+
         <div className={styles.body}>
           <div className={styles.btns}>
             <NavLink
@@ -32,6 +33,7 @@ const User = ({ className, items }) => {
             >
               Account
             </NavLink>
+
             <button className={cn("button-stroke button-small", styles.button)}>
               Log out
             </button>

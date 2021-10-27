@@ -1,117 +1,64 @@
-import React, { useState } from "react";
+import React from "react";
 import cn from "classnames";
 import styles from "./Login.module.sass";
-import Icon from "../Icon";
-import Form from "../Form";
+
 import TextInput from "../TextInput";
-import Radio from "../Radio";
+
+import { useAuthContext } from "../../contexts/AuthContext";
+import { authSignInEmail } from "../../utils/Authentication";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [confirmPhone, setConfirmPhone] = useState(true);
+  const { setUserAuth } = useAuthContext();
 
-  const handleSubmit = (e) => {
-    alert();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+
+    console.log("Signing in...")
+    authSignInEmail(email, password, (result, user, error) => {
+      if (result === "Sign In Success") {
+        setUserAuth(user);
+        console.log("Success!")
+      } else {
+        console.log(result, error);
+      }
+    });
   };
 
   return (
     <div className={cn(styles.login)}>
       <div className={styles.item}>
-        <div className={cn("h3", styles.title)}>Sign up on Fleet</div>
-        <div className={styles.info}>Use Your OpenID to Sign up</div>
-        <div className={styles.btns}>
-          <button className={cn("button", styles.button)}>
-            <Icon name="google" size="16" />
-            <span>Google</span>
-          </button>
-          <button className={cn("button-black", styles.button)}>
-            <Icon name="apple" size="16" />
-            <span>Apple</span>
-          </button>
-        </div>
-        <div className={styles.note}>Or continue with email</div>
-        <Form
-          className={styles.form}
-          value={email}
-          setValue={setEmail}
-          onSubmit={() => handleSubmit()}
-          placeholder="Enter your email"
-          type="email"
-          name="email"
-          icon="arrow-next"
-        />
-        <div className={styles.foot}>
-          Already have an account?{" "}
-          <a className={styles.link} href="/#" rel="noopener noreferrer">
-            Login
-          </a>
-        </div>
-      </div>
-      <div className={styles.item}>
-        <div className={cn("h3", styles.title)}>Sign in</div>
-        <form className={styles.form}>
+        <div className={cn("h4", styles.title)}>Sign In to ADM Days</div>
+
+        <form className={styles.form} action="" onSubmit={handleSubmit}>
           <TextInput
             className={styles.field}
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+
+          <TextInput
+            className={cn(styles.field, styles.password)}
             name="password"
             type="password"
             placeholder="Password"
             required
             view
           />
-          <button className={cn("button", styles.button)}>Login</button>
+
+          <button className={cn("button", styles.button)}>Sign In</button>
         </form>
+
         <div className={styles.foot}>
-          <a className={styles.password} href="/#" rel="noopener noreferrer">
-            Forgot password?
+          Don't have an account?{" "}
+          <a className={styles.link} href="/signup" rel="noopener noreferrer">
+            Sign Up
           </a>
         </div>
-      </div>
-      <div className={styles.item}>
-        <div className={cn("h3", styles.title)}>
-          Let’s confirm it’s really you
-        </div>
-        <div className={styles.info}>
-          Help us secure your account. Please complete the verifications below
-        </div>
-        <form className={styles.form}>
-          <div className={styles.variants}>
-            <Radio
-              className={styles.radio}
-              name="confirm"
-              value={confirmPhone}
-              onChange={() => setConfirmPhone(true)}
-              content="Get the code by text message (SM) at +1 234 567 890"
-            />
-            <Radio
-              className={styles.radio}
-              name="confirm"
-              value={!confirmPhone}
-              onChange={() => setConfirmPhone(false)}
-              content="Get the code by email at tranm••••••••••••@gm•••.com"
-            />
-          </div>
-          <button className={cn("button", styles.button)}>Continue</button>
-        </form>
-      </div>
-      <div className={styles.item}>
-        <div className={cn("h3", styles.title)}>Enter your security code</div>
-        <div className={styles.info}>We texted your code to +1 234 567 890</div>
-        <form className={styles.form}>
-          <div className={styles.code}>
-            <div className={styles.number}>
-              <input type="tel" />
-            </div>
-            <div className={styles.number}>
-              <input type="tel" />
-            </div>
-            <div className={styles.number}>
-              <input type="tel" />
-            </div>
-            <div className={styles.number}>
-              <input type="tel" />
-            </div>
-          </div>
-        </form>
       </div>
     </div>
   );

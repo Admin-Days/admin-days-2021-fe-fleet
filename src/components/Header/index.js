@@ -47,19 +47,22 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
               setValue={setVisibleNav}
             />
           </div>
-          {/* {notAuthorized ? (
+
+          {notAuthorized ? (
             <button className={styles.login} onClick={() => setVisible(true)}>
               <Icon name="user" size="24" />
             </button>
           ) : (
             <User className={styles.user} />
-          )} */}
+          )}
+
           <button
             className={cn(styles.burger, { [styles.active]: visibleNav })}
             onClick={() => setVisibleNav(!visibleNav)}
           ></button>
         </div>
       </div>
+      
       <Modal visible={visible} onClose={() => setVisible(false)}>
         <Login />
       </Modal>
