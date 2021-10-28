@@ -59,6 +59,8 @@
   height: 440px
   overflow: hidden
   padding: 2rem
+  +t
+    height: 400px
   +m
     width: 400px
   +s
@@ -75,10 +77,14 @@
     letter-spacing: -0.02em
     color: #FCFCFD
     margin-bottom: 2rem
+    +t
+      margin-bottom: 1.75rem
   & > div
     display: flex
     align-items: center
     margin-bottom: 3rem
+    +t
+      margin-bottom: 2rem
     span
       +jost
       font-style: normal
@@ -89,7 +95,7 @@
       color: #777E91
       margin-right: 8px
     img
-      height: 24px
+      height: 22px
   button
     display: flex
     flex-direction: row
@@ -119,12 +125,16 @@
   +s
     width: 100%
     max-width: 300px
+    height: fit-content
 
 .sideCard
   display: flex
   align-items: center
   padding: 2rem
   position: relative
+  width: 540px
+  +t
+    width: 380px
   +m
     width: 400px
   +s
@@ -135,11 +145,11 @@
     +dm-sans
     font-style: normal
     font-weight: bold
-    font-size: 28px
+    font-size: 24px
     line-height: 36px
     display: flex
     align-items: center
-    width: 12ch
+    width: 16ch
     margin-right: 240px
     +t
       font-size: 20px
@@ -161,6 +171,56 @@
       bottom: 0
       right: inherit
 
-br
+.br
   +s
     display: none
+
+.bottom
+  margin: auto
+  margin-top: 2rem
+  max-width: calc(300px + 2rem + 540px)
+  padding: 2rem
+  display: flex
+  +t
+    max-width: calc(300px + 2rem + 400px)
+  +m
+    width: 400px
+    flex-direction: column
+  +s
+    width: 100%
+    max-width: 300px
+  & > div
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    +m
+      width: 100%
+      margin-bottom: 2rem
+    span
+      font-family: Jost
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 32px
+      text-align: center
+      letter-spacing: -0.02em
+      color: #777E90
+    h3
+      +dm-sans
+      font-style: normal
+      font-weight: bold
+      font-size: 28px
+      line-height: 32px
+      text-align: center
+      letter-spacing: -0.02em
+      color: #FCFCFD
+      +m
+        font-size: 24px
+
+.columnMobile
+  display: flex
+  +s
+    display: block
+    width: 100%
