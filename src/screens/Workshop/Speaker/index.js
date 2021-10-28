@@ -5,16 +5,17 @@ import cn from "classnames";
 const Speaker = () => {
   return (
     <div className={cn(styles.section, "container")}>
-      <h1>How to Develop a Content Strategy in Digital Marketing</h1>
-      <div className={cn(styles.subtitle)}>
-        <span>presented by</span>
-        <div style={{width: 8}}></div>
-        <img src="assets/workshop-inamart.png" alt="inamart" />
-      </div>
+      <h1>Workshop 1</h1>
       <div className={cn(styles.row)}>
         <div className={cn(styles.card, styles.speaker)}>
-          <span>Speaker</span>
-          <img src="assets/workshop-speaker.jpg" alt="speaker" />
+          <h2>How to Develop a Content Strategy in Digital Marketing</h2>
+          <div>
+            <span>in collaboration with</span>
+            <img src="assets/workshop-inamart.png" alt="inamart" />
+          </div>
+          <span>presented by</span>
+          <h2>Agung Ari Wibowo</h2>
+          <button>Register</button>
         </div>
         <div className={styles.gap}></div>
         <div className={styles.column}>
