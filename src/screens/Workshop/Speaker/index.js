@@ -6,7 +6,7 @@ const Speaker = () => {
   return (
     <div className={cn(styles.section, "container")}>
       <h1>How to Develop a Content Strategy in Digital Marketing</h1>
-      <div className={cn(styles.row, styles.subtitle)}>
+      <div className={cn(styles.subtitle)}>
         <span>presented by</span>
         <div style={{width: 8}}></div>
         <img src="assets/workshop-inamart.png" alt="inamart" />
@@ -19,7 +19,7 @@ const Speaker = () => {
         <div className={styles.gap}></div>
         <div className={styles.column}>
           <div className={cn(styles.card, styles.sideCard)}>
-            <span>Comprehensive Digital <br /> Marketing</span>
+            <span>Comprehensive Digital <br className={styles.br} /> Marketing</span>
             <img src="assets/workshop-ilustration-1.png" alt="ilustration" />
           </div>
           <div className={styles.gap}></div>
