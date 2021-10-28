@@ -46,7 +46,7 @@ export const pages = [
     title: "CV Clinic & HRD Discussion Class",
     titleHTML: "CV Clinic & <br /> HRD Discussion Class",
     desc: "CV Clinic & HRD Discussion Class accommodate students in increasing knowledge about CV and interviews. In here, participants have the opportunity to consult personally regarding making the right CV. Participants will also conduct a simulated interview with HR from an agency or company who will later provide advice on presenting a CV to make it look professional and avoid classic mistakes.",
-    url: "/workshop",
+    url: "#",
     icon: "mdMessage",
     images: "/assets/landing-cv-clinic-logo.png",
     ilustration: "/assets/landing-businessman-thinking.png"

@@ -41,7 +41,8 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
                 (e) =>
                   e.title === "Home" ||
                   e.title === "Grand Opening" ||
-                  e.title === "Webinar"
+                  e.title === "Webinar" ||
+                  e.title === "Workshop" 
               )}
               title={currentPage}
               setValue={setVisibleNav}
