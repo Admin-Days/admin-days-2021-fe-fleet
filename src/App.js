@@ -10,6 +10,7 @@ import Webinar from "./screens/Webinar";
 import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
+import Workshop from "./screens/Workshop";
 
 initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -45,6 +46,16 @@ function App() {
           render={() => (
             <Page>
               <Webinar />
+            </Page>
+          )}
+        />
+
+        <Route
+          exact
+          path="/workshop"
+          render={() => (
+            <Page>
+              <Workshop />
             </Page>
           )}
         />
