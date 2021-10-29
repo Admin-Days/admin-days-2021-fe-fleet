@@ -42,7 +42,7 @@ const Workshop = () => {
         phoneNumber: userAuth.phoneNumber,
         organization: "FIA UI",
         registrationTimeStamp: serverTimestamp(),
-        eventId: `events/WEBINAR_${workshopId}`,
+        eventId: `events/WORKSHOP_${workshopId}`,
       });
       setSuccess(true);
       setLoading(false);
