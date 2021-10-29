@@ -8,7 +8,7 @@ import Modal from "../../components/Modal";
 import TextInput from "../../components/TextInput";
 
 import { useAuthContext } from "../../contexts/AuthContext";
-import { authSignUpEmail } from "../../utils/Authentication";
+import { authSignUpEmail, updateUserData } from "../../utils/Authentication";
 
 import firebaseConfig from "../../utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
@@ -30,14 +30,15 @@ const Signup = () => {
     e.preventDefault();
 
     const name = e.target[0].value;
+    const phoneNumber = e.target[1].value;
 
-    const email = e.target[1].value;
-    const password = e.target[2].value;
-    const confirmPassword = e.target[4].value;
+    const email = e.target[2].value;
+    const password = e.target[3].value;
+    const confirmPassword = e.target[5].value;
 
-    const ikm = e.target[5].files[0];
-    const ipk = e.target[6].files[0];
-    const cv = e.target[7].files[0];
+    const ikm = e.target[6].files[0];
+    const ipk = e.target[7].files[0];
+    const cv = e.target[8].files[0];
 
     if (password !== confirmPassword) {
       alert("Password do not match!");
@@ -49,6 +50,8 @@ const Signup = () => {
     await authSignUpEmail(email, password, async (result, user) => {
       if (result === "Sign Up Success") {
         setUserAuth(user);
+
+        await updateUserData(name, phoneNumber);
 
         let ikmLink, ipkLink, cvLink;
 
@@ -72,6 +75,7 @@ const Signup = () => {
           await addDoc(collection(db, "users"), {
             userId: user.uid,
             email: email,
+            phoneNumber: phoneNumber,
             name: name,
             ikm: ikmLink,
             ipk: ipkLink,
@@ -103,6 +107,14 @@ const Signup = () => {
               name="name"
               type="text"
               placeholder="Full Name"
+              required
+            />
+
+            <TextInput
+              className={styles.field}
+              name="phoneNum"
+              type="number"
+              placeholder="Phone Number"
               required
             />
 

@@ -8,6 +8,8 @@ import Landing from "./screens/Landing";
 import Webinar from "./screens/Webinar";
 import Signup from "./screens/Signup";
 
+import { AuthWrapper } from "./contexts/AuthContext";
+
 import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
@@ -19,59 +21,61 @@ signInAnonymously(auth);
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <Page>
-              <Landing />
-            </Page>
-          )}
-        />
+    <AuthWrapper>
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Page>
+                <Landing />
+              </Page>
+            )}
+          />
 
-        <Route
-          exact
-          path="/grand-opening"
-          render={() => (
-            <Page>
-              <GrandOpening />
-            </Page>
-          )}
-        />
+          <Route
+            exact
+            path="/grand-opening"
+            render={() => (
+              <Page>
+                <GrandOpening />
+              </Page>
+            )}
+          />
 
-        <Route
-          exact
-          path="/webinar"
-          render={() => (
-            <Page>
-              <Webinar />
-            </Page>
-          )}
-        />
+          <Route
+            exact
+            path="/webinar"
+            render={() => (
+              <Page>
+                <Webinar />
+              </Page>
+            )}
+          />
 
-        <Route
-          exact
-          path="/workshop"
-          render={() => (
-            <Page>
-              <Workshop />
-            </Page>
-          )}
-        />
+          <Route
+            exact
+            path="/workshop"
+            render={() => (
+              <Page>
+                <Workshop />
+              </Page>
+            )}
+          />
 
-        <Route
-          exact
-          path="/signup"
-          render={() => (
-            <Page footerHide={true}>
-              <Signup />
-            </Page>
-          )}
-        />
-      </Switch>
-    </Router>
+          <Route
+            exact
+            path="/signup"
+            render={() => (
+              <Page footerHide={true}>
+                <Signup />
+              </Page>
+            )}
+          />
+        </Switch>
+      </Router>
+    </AuthWrapper>
   );
 }
 

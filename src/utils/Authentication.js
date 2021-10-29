@@ -1,13 +1,12 @@
 import firebaseConfig from "./firebaseConfig";
 import { getApps, initializeApp } from "firebase/app";
 import {
-  EmailAuthProvider,
   getAuth,
   signOut,
-  linkWithCredential,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 
 if (!getApps.length) initializeApp(firebaseConfig);
@@ -29,8 +28,7 @@ function authSignInEmail(email, password, callback) {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      user = userCredential.user;
-      callback("Sign In Success", user, null);
+      callback("Sign In Success", userCredential.user, null);
     })
     .catch((e) => {
       callback("Sign In Error", null, e);
@@ -59,28 +57,6 @@ async function authSignUpEmail(email, password, callback) {
       console.log(e);
       callback("Sign Up Error", null);
     });
-
-  // Currently anonymous user.
-  // if (user) {
-  //   const credential = EmailAuthProvider.credential(email, password);
-  //   return linkWithCredential(auth, user, credential)
-  //     .then((userCredential) => {
-  //       callback("Sign Up Success", userCredential.user);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //       callback("Sign Up Error", e);
-  //     });
-  // } else {
-  //   return createUserWithEmailAndPassword(auth, email, password)
-  //     .then((userCredential) => {
-  //       callback("Sign Up Success", userCredential.user);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //       callback("Sign Up Error", null);
-  //     });
-  // }
 }
 
 function authSignOut(callback) {
@@ -104,4 +80,18 @@ function authSignOut(callback) {
   }
 }
 
-export { subscribeUser, authSignUpEmail, authSignInEmail, authSignOut };
+function updateUserData(displayName, phoneNumber) {
+  let user = auth.currentUser;
+
+  if (user && !user.isAnonymous) {
+    updateProfile(user, { displayName: displayName, phoneNumber: phoneNumber });
+  }
+}
+
+export {
+  subscribeUser,
+  authSignUpEmail,
+  authSignInEmail,
+  authSignOut,
+  updateUserData,
+};
