@@ -27,8 +27,6 @@ const Main = ({ onRegister }) => {
           className={styles.panel}
           classBody={styles.panelBody}
           classButton={styles.panelButton}
-          icon="arrow-next"
-          onButtonClick={onRegister}
         >
           <div className={styles.row}>
             <div className={cn("info", styles.panelInfo)}>

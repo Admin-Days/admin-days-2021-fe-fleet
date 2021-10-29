@@ -62,7 +62,7 @@ const Header = ({ separatorHeader, wide }) => {
 
           {!userAuth || userAuth.isAnonymous ? (
             <button className={styles.login} onClick={() => setVisible(true)}>
-              <Icon name="user" size="24" />
+              Login
             </button>
           ) : (
             <User

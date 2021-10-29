@@ -127,15 +127,29 @@
         margin-left: 20px
 
 .login
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    background: $p4
-    transition: background .2s
-    svg
-        fill: $n8
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 16px 24px
+    width: 115px
+    height: 48px
+    background: #FF884A
+    border-radius: 24px
+    +jost
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 16px
+    text-align: center
+    color: #FCFCFD
+    +m
+        padding: 12px
+        font-size: 14px
+        width: fit-content
+        height: fit-content
     &:hover
-        background: darken($p4, 8)
+        background: darken(#FF884A, 8)
 
 .burger
     display: none
