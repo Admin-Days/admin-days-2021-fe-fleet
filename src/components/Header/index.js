@@ -16,10 +16,8 @@ import { pages } from "../../mocks/pages";
 import { useAuthContext } from "../../contexts/AuthContext";
 import { authSignOut } from "../../utils/Authentication";
 
-const Header = ({ separatorHeader, wide, notAuthorized }) => {
+const Header = ({ separatorHeader, wide }) => {
   const { userAuth, setUserAuth } = useAuthContext();
-
-  console.log(userAuth);
 
   const [visibleNav, setVisibleNav] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -68,13 +66,13 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
           ) : (
             <User
               className={styles.user}
-              username={userAuth.displayName}
+              username={userAuth.email}
               logout={() => {
                 authSignOut((result) => {
                   if (result === "Sign Out Success") {
                     setUserAuth(null);
                   }
-                  
+
                   alert(result);
                 });
               }}

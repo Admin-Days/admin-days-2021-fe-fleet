@@ -9,7 +9,7 @@ import Footer from "../Footer";
 const Page = ({
   separatorHeader,
   children,
-  fooferHide,
+  footerHide,
   wide,
   notAuthorized,
 }) => {
@@ -29,7 +29,7 @@ const Page = ({
           notAuthorized={notAuthorized}
         />
         <div className={styles.inner}>{children}</div>
-        {!fooferHide && <Footer />}
+        {!footerHide && <Footer />}
       </div>
     </>
   );

@@ -6,6 +6,7 @@ import Page from "./components/Page";
 import GrandOpening from "./screens/GrandOpening";
 import Landing from "./screens/Landing";
 import Webinar from "./screens/Webinar";
+import Signup from "./screens/Signup";
 
 import { AuthWrapper } from "./contexts/AuthContext";
 
@@ -26,7 +27,7 @@ function App() {
             exact
             path="/"
             render={() => (
-              <Page notAuthorized={true}>
+              <Page>
                 <Landing />
               </Page>
             )}
@@ -48,6 +49,16 @@ function App() {
             render={() => (
               <Page>
                 <Webinar />
+              </Page>
+            )}
+          />
+
+          <Route
+            exact
+            path="/signup"
+            render={() => (
+              <Page footerHide={true}>
+                <Signup />
               </Page>
             )}
           />

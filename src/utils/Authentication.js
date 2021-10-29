@@ -37,7 +37,7 @@ function authSignInEmail(email, password, callback) {
     });
 }
 
-function authSignUpEmail(email, password, callback) {
+async function authSignUpEmail(email, password, callback) {
   // callback: (result: string, user: firebase.default.User) => void
   let user = auth.currentUser;
 
@@ -47,29 +47,40 @@ function authSignUpEmail(email, password, callback) {
     return;
   }
 
-  // Currently anonymous user.
   if (user) {
-    const credential = EmailAuthProvider.credential(email, password);
-    linkWithCredential(auth, user, credential)
-      .then((userCredential) => {
-        user = userCredential.user;
-        callback("Sign Up Success", user);
-      })
-      .catch((e) => {
-        console.log(e);
-        callback("Sign Up Error", null);
-      });
-  } else {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        user = userCredential.user;
-        callback("Sign Up Success", user);
-      })
-      .catch((e) => {
-        console.log(e);
-        callback("Sign Up Error", null);
-      });
+    await signOut(auth);
   }
+
+  return createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      callback("Sign Up Success", userCredential.user);
+    })
+    .catch((e) => {
+      console.log(e);
+      callback("Sign Up Error", null);
+    });
+
+  // Currently anonymous user.
+  // if (user) {
+  //   const credential = EmailAuthProvider.credential(email, password);
+  //   return linkWithCredential(auth, user, credential)
+  //     .then((userCredential) => {
+  //       callback("Sign Up Success", userCredential.user);
+  //     })
+  //     .catch((e) => {
+  //       console.log(e);
+  //       callback("Sign Up Error", e);
+  //     });
+  // } else {
+  //   return createUserWithEmailAndPassword(auth, email, password)
+  //     .then((userCredential) => {
+  //       callback("Sign Up Success", userCredential.user);
+  //     })
+  //     .catch((e) => {
+  //       console.log(e);
+  //       callback("Sign Up Error", null);
+  //     });
+  // }
 }
 
 function authSignOut(callback) {
