@@ -30,13 +30,13 @@ const Speaker = ({
         <div className={styles.column}>
           <div className={cn(styles.card, styles.sideCard)}>
             <span>
-              {subjects.[0]}
+              {subjects[0]}
             </span>
             <img src="assets/workshop-ilustration-1.png" alt="ilustration" />
           </div>
           <div className={styles.gap}></div>
           <div className={cn(styles.card, styles.sideCard)}>
-            <span>{subjects.[1]}</span>
+            <span>{subjects[1]}</span>
             <img src="assets/workshop-ilustration-2.png" alt="ilustration" />
           </div>
         </div>
@@ -45,18 +45,18 @@ const Speaker = ({
         <div>
           <span>premiering:</span>
           <div className={styles.columnMobile}>
-            <pre><h3>{datetimePremiere.[0]}, </h3></pre>
-            <h3>{datetimePremiere.[1]}</h3>
+            <pre><h3>{datetimePremiere[0]}, </h3></pre>
+            <h3>{datetimePremiere[1]}</h3>
           </div>
-          <h3>{datetimePremiere.[2]}</h3>
+          <h3>{datetimePremiere[2]}</h3>
         </div>
         <div>
           <span>deadline to register:</span>
           <div className={styles.columnMobile}>
-            <pre><h3>{datetimeDeadline.[0]}, </h3></pre>
-            <h3>{datetimeDeadline.[1]}</h3>
+            <pre><h3>{datetimeDeadline[0]}, </h3></pre>
+            <h3>{datetimeDeadline[1]}</h3>
           </div>
-          <h3>{datetimeDeadline.[2]}</h3>
+          <h3>{datetimeDeadline[2]}</h3>
         </div>
       </div>
     </div>
