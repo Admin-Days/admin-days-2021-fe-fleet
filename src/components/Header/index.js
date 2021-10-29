@@ -67,7 +67,7 @@ const Header = ({ separatorHeader, wide }) => {
           ) : (
             <User
               className={styles.user}
-              username={userAuth.email}
+              username={userAuth.displayName}
               logout={() => {
                 authSignOut((result) => {
                   if (result === "Sign Out Success") {

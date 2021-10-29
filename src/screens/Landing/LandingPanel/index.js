@@ -2,6 +2,7 @@ import React from "react";
 import cn from "classnames";
 import styles from "./PanelLanding.module.sass";
 import { pages } from "../../../mocks/pages";
+import { Link } from "react-router-dom";
 
 const PanelLanding = ({ className, classBody }) => {
   return (
@@ -20,12 +21,12 @@ const PanelLanding = ({ className, classBody }) => {
         {pages
           .filter((e) => e.images)
           .map((e) => (
-            <a href={e.url}>
+            <Link to={e.url}>
               <div key={e.title} className={styles.eventLogo}>
                 <img src={e.images} alt={e.title} />
                 <p>{e.title}</p>
               </div>
-            </a>
+            </Link>
           ))}
       </div>
     </div>
