@@ -5,7 +5,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import styles from "./User.module.sass";
 import Avatar from "react-avatar";
 
-const User = ({ className, username }) => {
+const User = ({ className, username, logout }) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -25,16 +25,19 @@ const User = ({ className, username }) => {
 
         <div className={styles.body}>
           <div className={styles.btns}>
-            <NavLink
+            {/* <NavLink
               className={cn("button button-small", styles.button)}
               activeClassName={styles.active}
               to="/account-settings"
               onClick={() => setVisible(!visible)}
             >
               Account
-            </NavLink>
+            </NavLink> */}
 
-            <button className={cn("button-stroke button-small", styles.button)}>
+            <button
+              className={cn("button-stroke button-small", styles.button)}
+              onClick={logout}
+            >
               Log out
             </button>
           </div>

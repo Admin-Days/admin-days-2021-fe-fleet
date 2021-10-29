@@ -2,18 +2,31 @@ import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Header.module.sass";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
+
 import Dropdown from "./Dropdown";
 import User from "./User";
 import Icon from "../Icon";
 import Modal from "../Modal";
 import Login from "../Login";
-import { useHistory } from "react-router";
 import Logo from "./Logo";
+import Loader from "../../components/Loader";
+
 import { pages } from "../../mocks/pages";
+import { useAuthContext } from "../../contexts/AuthContext";
+import { authSignOut } from "../../utils/Authentication";
 
 const Header = ({ separatorHeader, wide, notAuthorized }) => {
+  const { userAuth, setUserAuth } = useAuthContext();
+
+  console.log(userAuth);
+
   const [visibleNav, setVisibleNav] = useState(false);
   const [visible, setVisible] = useState(false);
+
+  const [signInLoading, setSignInLoading] = useState(false);
+  const [signInSuccess, setSignInSuccess] = useState(false);
+  const [signInError, setSignInError] = useState("");
 
   const history = useHistory();
 
@@ -48,12 +61,24 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
             />
           </div>
 
-          {notAuthorized ? (
+          {!userAuth || userAuth.isAnonymous ? (
             <button className={styles.login} onClick={() => setVisible(true)}>
               <Icon name="user" size="24" />
             </button>
           ) : (
-            <User className={styles.user} />
+            <User
+              className={styles.user}
+              username={userAuth.displayName}
+              logout={() => {
+                authSignOut((result) => {
+                  if (result === "Sign Out Success") {
+                    setUserAuth(null);
+                  }
+                  
+                  alert(result);
+                });
+              }}
+            />
           )}
 
           <button
@@ -62,9 +87,35 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
           ></button>
         </div>
       </div>
-      
+
       <Modal visible={visible} onClose={() => setVisible(false)}>
-        <Login />
+        <Login
+          setLoading={setSignInLoading}
+          onSuccess={() => {
+            setSignInLoading(false);
+            setSignInSuccess(true);
+          }}
+          onError={(error) => {
+            setSignInError(error);
+            setSignInLoading(false);
+            setSignInSuccess(true);
+          }}
+        />
+      </Modal>
+
+      <Modal visible={signInLoading}>
+        <div className={styles.loadingContainer}>
+          <Loader className={styles.loader} />
+          <h1 className={styles.loadingText}>Signing in...</h1>
+        </div>
+      </Modal>
+
+      <Modal visible={signInSuccess} onClose={() => setSignInSuccess(false)}>
+        {signInError === "" ? (
+          <h1>Successfully Login!</h1>
+        ) : (
+          <h1>Failed to sign in! {signInError}</h1>
+        )}
       </Modal>
     </>
   );

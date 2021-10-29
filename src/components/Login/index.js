@@ -7,21 +7,25 @@ import TextInput from "../TextInput";
 import { useAuthContext } from "../../contexts/AuthContext";
 import { authSignInEmail } from "../../utils/Authentication";
 
-const Login = () => {
+const Login = ({ setLoading, onSuccess, onError }) => {
   const { setUserAuth } = useAuthContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     const email = e.target[0].value;
     const password = e.target[1].value;
 
-    console.log("Signing in...")
+    console.log("Signing in...");
     authSignInEmail(email, password, (result, user, error) => {
       if (result === "Sign In Success") {
         setUserAuth(user);
-        console.log("Success!")
+        onSuccess();
+        console.log("Success!");
       } else {
+        onError(result);        
         console.log(result, error);
       }
     });

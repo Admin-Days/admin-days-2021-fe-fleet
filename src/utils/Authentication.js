@@ -76,14 +76,18 @@ function authSignOut(callback) {
   // callback: (result: string) => void
   let user = auth.currentUser;
 
-  if (user && !user.isAnonymous) {
-    signOut(auth)
-      .then(() => {
-        callback("Sign Out Success");
-      })
-      .catch(() => {
-        callback("Sign Out Error");
-      });
+  if (user) {
+    if (user.isAnonymous) {
+      callback("Not Yet Signed In");
+    } else {
+      signOut(auth)
+        .then(() => {
+          callback("Sign Out Success");
+        })
+        .catch(() => {
+          callback("Sign Out Error");
+        });
+    }
   } else {
     callback("Not Yet Signed In");
   }
