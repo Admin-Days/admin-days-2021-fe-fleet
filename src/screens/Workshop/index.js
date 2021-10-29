@@ -28,7 +28,7 @@ const Workshop = () => {
   const [success, setSuccess] = useState(false);
 
   const handleRegistration = async (workshopId) => {
-    if (userAuth == null) {
+    if (userAuth == null || userAuth.isAnonymous) {
       alert("Please sign in to register!");
       return;
     }
