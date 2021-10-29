@@ -1,0 +1,226 @@
+@import ../../../styles/helpers
+
+.section
+  margin-bottom: 8rem
+  h1
+    +dm-sans
+    font-style: normal
+    font-weight: bold
+    font-size: 48px
+    line-height: 64px
+    text-align: center
+    letter-spacing: -0.02em
+    color: #FCFCFD
+    width: 20ch
+    margin: auto
+    margin-bottom: 4rem
+    +m
+      font-size: 32px
+      line-height: 40px
+      width: 100%
+      max-width: 20ch
+
+.row
+  display: flex
+  justify-content: center
+  align-items: stretch
+  +m
+    flex-direction: column
+    align-items: center
+.gap
+  width: 2rem
+  height: 2rem
+
+.subtitle
+  margin-bottom: 4rem
+  display: flex
+  justify-content: center
+  align-items: stretch
+  span
+    +jost
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 24px
+    letter-spacing: -0.01em
+    color: #777E91
+
+.card
+  background: #2B243F
+  box-shadow: 0px 44.0412px 88.0825px -44.0412px rgba(15, 15, 15, 0.1)
+  border-radius: 34.4072px
+
+.speaker
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 300px
+  height: 440px
+  overflow: hidden
+  padding: 2rem
+  +t
+    height: 400px
+  +m
+    width: 400px
+  +s
+    width: 100%
+    max-width: 300px
+    height: auto
+  h2
+    +dm-sans
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 36px
+    text-align: center
+    letter-spacing: -0.02em
+    color: #FCFCFD
+    margin-bottom: 2rem
+    +t
+      margin-bottom: 1.75rem
+  & > div
+    display: flex
+    align-items: center
+    margin-bottom: 3rem
+    +t
+      margin-bottom: 2rem
+    span
+      +jost
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 32px
+      letter-spacing: -0.01em
+      color: #777E91
+      margin-right: 8px
+    img
+      height: 22px
+  button
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 16px 24px
+    width: 115px
+    height: 48px
+    background: #FF884A
+    border-radius: 24px
+    +jost
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 16px
+    text-align: center
+    color: #FCFCFD
+
+.column
+  height: 440px
+  display: grid
+  grid-template-rows: 1fr 2rem 1fr
+  +t
+    height: 400px
+  +m
+    width: 400px
+  +s
+    width: 100%
+    max-width: 300px
+    height: fit-content
+
+.sideCard
+  display: flex
+  align-items: center
+  padding: 2rem
+  position: relative
+  width: 540px
+  +t
+    width: 380px
+  +m
+    width: 400px
+  +s
+    width: 100%
+    max-width: 300px
+    flex-direction: column
+  span
+    +dm-sans
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 36px
+    display: flex
+    align-items: center
+    width: 16ch
+    margin-right: 240px
+    +t
+      font-size: 20px
+      line-height: 28px
+      margin-right: 180px
+    +s
+      margin-right: 0
+      text-align: center
+      margin-bottom: 100px
+      width: 90%
+  img
+    width: 280px
+    position: absolute
+    right: 16px
+    bottom: 0
+    +t
+      width: 200px
+    +s
+      bottom: 0
+      right: inherit
+
+.br
+  +s
+    display: none
+
+.bottom
+  margin: auto
+  margin-top: 2rem
+  max-width: calc(300px + 2rem + 540px)
+  padding: 2rem
+  display: flex
+  +t
+    max-width: calc(300px + 2rem + 400px)
+  +m
+    width: 400px
+    flex-direction: column
+  +s
+    width: 100%
+    max-width: 300px
+  & > div
+    width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    +m
+      width: 100%
+      margin-bottom: 2rem
+    span
+      font-family: Jost
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 32px
+      text-align: center
+      letter-spacing: -0.02em
+      color: #777E90
+    h3
+      +dm-sans
+      font-style: normal
+      font-weight: bold
+      font-size: 28px
+      line-height: 32px
+      text-align: center
+      letter-spacing: -0.02em
+      color: #FCFCFD
+      +m
+        font-size: 24px
+
+.columnMobile
+  display: flex
+  +s
+    display: block
+    width: 100%
