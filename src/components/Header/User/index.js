@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import cn from "classnames";
 import OutsideClickHandler from "react-outside-click-handler";
 import styles from "./User.module.sass";
