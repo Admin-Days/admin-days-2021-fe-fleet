@@ -148,7 +148,7 @@ const Signup = () => {
               <input
                 type="file"
                 name="ikm"
-                accept=".png, .jpg, .jpeg"
+                accept=".png, .jpg, .jpeg, .pdf"
                 required
               />
             </div>
@@ -158,7 +158,7 @@ const Signup = () => {
               <input
                 type="file"
                 name="ipk"
-                accept=".png, .jpg, .jpeg"
+                accept=".png, .jpg, .jpeg, .pdf"
                 required
               />
             </div>
@@ -168,7 +168,7 @@ const Signup = () => {
               <input
                 type="file"
                 name="cv"
-                accept=".png, .jpg, .jpeg"
+                accept=".png, .jpg, .jpeg, .pdf"
                 required
               />
             </div>
