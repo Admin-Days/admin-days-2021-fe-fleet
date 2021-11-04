@@ -2,15 +2,17 @@
 
 .footer
     margin-top: 4rem
+
     .title
         text-align: center
-        margin-bottom: 3rem
+        margin-bottom: 2rem
         +dm-sans
         font-weight: bold
-        color: #FCFCFD
+        color: #777E90
         font-size: 2.5rem
         +t
             font-size: 2rem
+
     .subTitle
         margin: 4rem 0 2rem 0
         font-weight: normal
@@ -21,17 +23,34 @@
         color: #777E91
         +t
             font-size: 1.2rem
-    .logoWrapper
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-        margin-bottom: 3rem
-        .logo
-            width: 6rem
-            margin: 2rem
-            +m
-                width: 3rem
-                margin: 1rem
+
+.sponsorContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    .sponsorLink
+        width: 40%
+    .sponsor
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+
+.partnerContainer
+    margin-top: 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    .partnerLink
+        width: 35%
+    .partner
+        width: 100%
+        margin-left: auto
+
+.mediaPartnerContainer
+    margin-top: 100px
+    .mediaPartners
+        width: 100%
+        border-radius: 16px
 
 .bottom
     margin-top: 6rem
@@ -45,7 +64,3 @@
     text-align: center
     +dark
         color: $n4
-
-.partners
-    width: 100%
-    border-radius: 16px
