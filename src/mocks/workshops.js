@@ -6,6 +6,7 @@ export const workshops = [
     subjects: ["Comprehensive Digital Marketing", "Step by Step Developing a Content Strategy"],
     datetimePremiere: ["Saturday", "30 October 2021", "13.00 - 15.30 WIB"],
     datetimeDeadline: ["Friday", "29 October 2021", "15.00 WIB"],
+    isOpen: false,
   },
   {
     title: "Mergers and Acquisitions of Banking in Indonesia",
@@ -14,5 +15,25 @@ export const workshops = [
     subjects: ["Process of Mergers and Acquisitions of banking in Indonesia", "Global merger and acquisition process benchmarks"],
     datetimePremiere: ["Sunday", "31 October 2021", "13.00 - 15.30 WIB"],
     datetimeDeadline: ["Friday", "29 October 2021", "15.00 WIB"],
+    isOpen: false,
+  },
+  {
+    title: "Procurement of Government Goods / Services",
+    subtitle: "Perspective of Perpres Nomor 16 Tahun 2018 and Perpres Nomor 12 Tahun 2021",
+    sponsorImage: "assets/workshop-lkpp.png",
+    presenter: "Tri Susanto",
+    subjects: ["Government PBJ mechanism through providers", "Government PBJ mechanism through self-management"],
+    datetimePremiere: ["Saturday", "06 November 2021", "13.00 - 15.30 WIB"],
+    datetimeDeadline: ["Friday", "05 November 2021", "18.00 WIB"],
+    isOpen: true,
+  },
+  {
+    title: "ASN Compensation Management",
+    sponsorImage: "assets/workshop-bkn.png",
+    presenter: "Dr. Janry Haposan Ulil Panusunan Simanungkalit, M.Si.",
+    subjects: ["ASN Compensation System", "ASN Compensation System"],
+    datetimePremiere: ["Sunday", "07 November 2021", "13.00 - 15.30 WIB"],
+    datetimeDeadline: ["Saturday", "06 November 2021", "18.00 WIB"],
+    isOpen: true,
   },
 ]

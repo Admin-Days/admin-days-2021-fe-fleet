@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Workshop.module.sass"
+import styles from "./Workshop.module.sass";
 import { workshops } from "../../mocks/workshops";
 
 import Main from "./Main";
@@ -59,7 +59,9 @@ const Workshop = () => {
         <Speaker
           {...e}
           index={i + 1}
-          onClick={() => handleRegistration(i + 1)}
+          onClick={() => {
+            if (e.isOpen) handleRegistration(i + 1);
+          }}
         />
       ))}
 
