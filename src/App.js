@@ -14,6 +14,7 @@ import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
 import Workshop from "./screens/Workshop";
+import CVClinic from "./screens/CVClinic";
 
 initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -60,6 +61,16 @@ function App() {
             render={() => (
               <Page>
                 <Workshop />
+              </Page>
+            )}
+          />
+
+          <Route
+            exact
+            path="/cv-clinic"
+            render={() => (
+              <Page>
+                <CVClinic />
               </Page>
             )}
           />

@@ -22,8 +22,8 @@ const LandingCarousel = () => {
       history.push("/webinar")
     } else if (activeIndex === 2) {
       history.push("/workshop")
-    } else{
-      setShowModal(true)
+    } else if (activeIndex === 3) {
+      history.push("/cv-clinic")
     }
   }
 

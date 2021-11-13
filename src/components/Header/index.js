@@ -50,10 +50,7 @@ const Header = ({ separatorHeader, wide }) => {
               className={styles.drowdown}
               items={pages.filter(
                 (e) =>
-                  e.title === "Home" ||
-                  e.title === "Grand Opening" ||
-                  e.title === "Webinar" ||
-                  e.title === "Workshop" 
+                  e.id !== "jf" || e.id !== "gc"
               )}
               title={currentPage}
               setValue={setVisibleNav}
