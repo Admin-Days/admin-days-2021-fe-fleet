@@ -28,13 +28,12 @@ const Speaker = ({
           <h2>{presenter}</h2>
 
           {isOpen ? (
-            <button
-              onClick={onClick}
-              enabled={isOpen}
-            >
+            <button onClick={onClick} enabled={isOpen}>
               Register
             </button>
-          ) : "Closed"}
+          ) : (
+            "Closed"
+          )}
         </div>
 
         <div className={styles.gap}></div>
@@ -46,10 +45,12 @@ const Speaker = ({
           </div>
 
           <div className={styles.gap}></div>
-          <div className={cn(styles.card, styles.sideCard)}>
-            <span>{subjects[1]}</span>
-            <img src="assets/workshop-ilustration-2.png" alt="ilustration" />
-          </div>
+          {subjects[1] && (
+            <div className={cn(styles.card, styles.sideCard)}>
+              <span>{subjects[1]}</span>
+              <img src="assets/workshop-ilustration-2.png" alt="ilustration" />
+            </div>
+          )}
         </div>
       </div>
 

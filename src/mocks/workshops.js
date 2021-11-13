@@ -25,7 +25,7 @@ export const workshops = [
     subjects: ["Government PBJ mechanism through providers", "Government PBJ mechanism through self-management"],
     datetimePremiere: ["Saturday", "06 November 2021", "13.00 - 15.30 WIB"],
     datetimeDeadline: ["Friday", "05 November 2021", "18.00 WIB"],
-    isOpen: true,
+    isOpen: false,
   },
   {
     title: "ASN Compensation Management",
@@ -34,6 +34,24 @@ export const workshops = [
     subjects: ["ASN Compensation System", "ASN Compensation System"],
     datetimePremiere: ["Sunday", "07 November 2021", "13.00 - 15.30 WIB"],
     datetimeDeadline: ["Saturday", "06 November 2021", "18.00 WIB"],
+    isOpen: false,
+  },
+  {
+    title: "Basic Transfer Pricing and Discussion: Related Party Transaction and Supply Chain Analysis",
+    sponsorImage: "assets/workshop-rsm.png",
+    presenter: "Bimantoro Whisnu Aji",
+    subjects: ["Basic Transfer Pricing", "Related Party Transaction"],
+    datetimePremiere: ["Sunday", "14 November 2021", "13.00 - 15.30 WIB"],
+    datetimeDeadline: ["Sunday", "14 November 2021", "12.00 WIB"],
+    isOpen: true,
+  },
+  {
+    title: "Corporate Income Tax Fiscal Reconciliation: Taxpayer vs Tax Office",
+    sponsorImage: "assets/workshop-ey.png",
+    presenter: "Irman Putra Fadjar",
+    subjects: ["Differences in interpretation of fiscal correction between the taxpayer and the tax office"],
+    datetimePremiere: ["Saturday", "20 November 2021", "13.00 - 15.30 WIB"],
+    datetimeDeadline: ["Saturday", "20 November 2021", "12.00 WIB"],
     isOpen: true,
   },
 ]
