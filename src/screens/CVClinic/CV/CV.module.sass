@@ -3,11 +3,28 @@
 .section 
   display: flex
   justify-content: space-between
+  align-items: center
+  +m
+    flex-direction: column-reverse
   img 
-    width: 480px
+    width: 100%
+    max-width: 480px
+    height: auto
+    margin: auto
     transform: translateY(-24px)
+    +d
+      max-width: 320px
 
 .text
+  margin-right: 24px
+  +t
+    width: 50%
+  +m
+    width: 100%
+    padding: 0 32px
+    margin: auto
+  +s
+    padding: 0 16px
   h2
     +dm-sans
     font-style: normal
@@ -43,3 +60,5 @@
     line-height: 16px
     text-align: center
     color: #FCFCFD
+    +m
+      margin: auto
