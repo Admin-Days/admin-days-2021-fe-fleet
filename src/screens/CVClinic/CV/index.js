@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./CV.module.sass";
 import cn from "classnames";
 
-const CV = () => {
+const CV = ({onClick}) => {
   return (
     <section className={cn(styles.section, "container")}>
       <div className={styles.text}>
@@ -18,7 +18,7 @@ const CV = () => {
           provide advice on presenting a CV to make it look professional and
           avoid classic mistakes that usually occur when applying for jobs.
         </p>
-        <button>Let’s get you prepared!</button>
+        <button onClick={onClick}>Let’s get you prepared!</button>
       </div>
       <img src="./assets/cvclinic-ilustration.png" alt="ilustration" />
     </section>
