@@ -75,6 +75,7 @@ const JobfairLanding = () => {
         isFullTime: data.isFullTime,
         duration: data.duration,
         workFrom: data.workFrom,
+        requiredData: data.requiredData,
         tags: data.tags, // Data model -> tags: [{tag: "Keren"}, {tag: "Seru"}]
         attachmentUrl: data.attachmentUrl, // To access, use attachmentUrl.src (if not undefined)
       });

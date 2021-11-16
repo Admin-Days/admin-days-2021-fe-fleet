@@ -14,6 +14,7 @@ import CVClinic from "./screens/CVClinic";
 
 import JobfairLanding from "./screens/Jobfair/Landing";
 import JobfairJob from "./screens/Jobfair/Job";
+import JobfairApply from "./screens/Jobfair/Apply";
 
 import { AuthWrapper } from "./contexts/AuthContext";
 
@@ -95,6 +96,15 @@ function App() {
             render={() => (
               <Page>
                 <JobfairJob />
+              </Page>
+            )}
+          />
+
+          <Route
+            path="/jobfair/apply/:jobId"
+            render={() => (
+              <Page>
+                <JobfairApply />
               </Page>
             )}
           />

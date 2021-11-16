@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { setDarkMode } from "../../../utils/dark";
 
+import { setDarkMode } from "../../../utils/dark";
 import Main from "./Main";
 
 import firebaseConfig from "../../../utils/firebaseConfig";
@@ -46,6 +46,7 @@ const JobfairJob = () => {
         isFullTime: data.isFullTime,
         duration: data.duration,
         workFrom: data.workFrom,
+        requiredData: data.requiredData,
         tags: data.tags, // Data model -> tags: [{tag: "Keren"}, {tag: "Seru"}]
         attachmentUrl: data.attachmentUrl, // To access, use attachmentUrl.src (if not undefined)
       });
