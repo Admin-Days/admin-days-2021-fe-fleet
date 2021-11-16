@@ -1,6 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Main.module.sass";
+import Panel from "../../../../components/Panel";
 
 const Main = () => {
   return (
@@ -8,18 +9,49 @@ const Main = () => {
       <div className={cn("container", styles.container)}>
         <div className={styles.preview}>
           <picture>
-            <source media="(max-width: 767px)" srcSet="/assets/go-hero.jpg" />
-            <img src="/assets/go-hero.jpg" alt="Main" />
+            <source
+              media="(max-width: 767px)"
+              srcSet="/assets/jobfair-hero.jpg"
+            />
+            <img src="/assets/jobfair-hero.jpg" alt="Main" />
           </picture>
 
           <div className={styles.wrap}>
             <h1 className={cn("hero", styles.title)}>Job Fair</h1>
             <div className={cn("info", styles.info)}>
-              Every grand event needs a<br />
-              grand opening
+              Explore your future right here
             </div>
           </div>
         </div>
+        <Panel
+          className={styles.panel}
+          classBody={styles.panelBody}
+          classButton={styles.panelButton}
+        >
+          <div className={styles.row}>
+            <div className={cn("info", styles.panelInfo)}>
+              <div className={styles.item}>
+                <h2>10</h2>
+                <h5>Companies</h5>
+              </div>
+              <div className={styles.itemGap}></div>
+              <div className={styles.item}>
+                <h2>10</h2>
+                <h5>Jobs</h5>
+              </div>
+              <div className={styles.itemGap}></div>
+              <div className={styles.item}>
+                <h2>10</h2>
+                <h5>Internships</h5>
+              </div>
+              <div className={styles.itemGap}></div>
+              <div className={styles.item}>
+                <h2>10</h2>
+                <h5>Full Times</h5>
+              </div>
+            </div>
+          </div>
+        </Panel>
       </div>
     </div>
   );

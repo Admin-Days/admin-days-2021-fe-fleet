@@ -106,3 +106,54 @@
             flex: 0 0 296px
             +t
                 flex: 0 0 210px
+
+.panel
+    +m
+        transform: translateY(64px)
+
+.panelButton
+    display: none
+
+.panelBody
+    padding: 20px
+    width: 100%
+.row
+    width: 100%
+.panelInfo
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    width: 100%
+    max-width: 800px
+    margin: auto
+    +m
+        justify-content: center
+    .item
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin: 0 12px
+        +m
+            width: 30%
+            margin: 12px
+        +s
+            width: 40%
+        h2
+            +dm-sans
+            font-style: normal
+            font-weight: bold
+            font-size: 72px
+            color: rgba(255, 255, 255, 0.92)
+            margin-bottom: 0px
+            +s
+                font-size: 54px
+        h5
+            +jost
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            color: #777E90
+            margin-top: 0px
+            +m
+                color: rgba(255, 255, 255, 0.7)

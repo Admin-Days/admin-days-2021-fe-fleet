@@ -13,10 +13,9 @@ const Main = () => {
           </picture>
 
           <div className={styles.wrap}>
-            <h1 className={cn("hero", styles.title)}>Job Fair Job</h1>
+            <h1 className={cn("hero", styles.title)}>Job Fair</h1>
             <div className={cn("info", styles.info)}>
-              Every grand event needs a<br />
-              grand opening
+            Explore your future right here
             </div>
           </div>
         </div>
