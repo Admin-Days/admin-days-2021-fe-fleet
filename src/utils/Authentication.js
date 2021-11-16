@@ -1,11 +1,13 @@
 import firebaseConfig from "./firebaseConfig";
 import { getApps, initializeApp } from "firebase/app";
 import {
-  getAuth,
-  signOut,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
+  browserSessionPersistence,
   createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  setPersistence,
+  signInWithEmailAndPassword,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 
@@ -26,9 +28,15 @@ function authSignInEmail(email, password, callback) {
     return;
   }
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      callback("Sign In Success", userCredential.user, null);
+  setPersistence(auth, browserSessionPersistence)
+    .then(() => {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          callback("Sign In Success", userCredential.user, null);
+        })
+        .catch((e) => {
+          callback("Sign In Error", null, e);
+        });
     })
     .catch((e) => {
       callback("Sign In Error", null, e);
