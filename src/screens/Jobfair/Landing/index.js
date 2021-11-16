@@ -9,8 +9,6 @@ import {
   collection,
   getDocs,
   getFirestore,
-  query,
-  where,
 } from "firebase/firestore";
 
 initializeApp(firebaseConfig);

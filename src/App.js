@@ -11,7 +11,9 @@ import Webinar from "./screens/Webinar";
 import Signup from "./screens/Signup";
 import Workshop from "./screens/Workshop";
 import CVClinic from "./screens/CVClinic";
+
 import JobfairLanding from "./screens/Jobfair/Landing";
+import JobfairJob from "./screens/Jobfair/Job";
 
 import { AuthWrapper } from "./contexts/AuthContext";
 
@@ -84,6 +86,15 @@ function App() {
             render={() => (
               <Page>
                 <JobfairLanding />
+              </Page>
+            )}
+          />
+
+          <Route
+            path="/jobfair/job/:jobId"
+            render={() => (
+              <Page>
+                <JobfairJob />
               </Page>
             )}
           />
