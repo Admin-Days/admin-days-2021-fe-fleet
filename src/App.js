@@ -15,16 +15,17 @@ import CVClinic from "./screens/CVClinic";
 import JobfairLanding from "./screens/Jobfair/Landing";
 import JobfairJob from "./screens/Jobfair/Job";
 import JobfairApply from "./screens/Jobfair/Apply";
+import JobFairHub from "./screens/Jobfair/JobFairHub";
+import CompanyVisit from "./screens/Jobfair/CompanyVisit";
+import CompanyPresentation from "./screens/Jobfair/CompanyPresentation";
+import Company from "./screens/Jobfair/Company";
+
 
 import { AuthWrapper } from "./contexts/AuthContext";
 
 import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
-import JobFairHub from "./screens/Jobfair/JobFairHub";
-import CompanyVisit from "./screens/Jobfair/CompanyVisit";
-import Company from "./screens/Jobfair/Company";
-
 initializeApp(firebaseConfig);
 const auth = getAuth();
 signInAnonymously(auth);
@@ -113,13 +114,23 @@ function App() {
               </Page>
             )}
           />
-          
+
           <Route
             exact
             path="/jobfair/company-visit"
             render={() => (
               <Page>
                 <CompanyVisit />
+              </Page>
+            )}
+          />
+
+          <Route
+            exact
+            path="/jobfair/company-presentation"
+            render={() => (
+              <Page>
+                <CompanyPresentation />
               </Page>
             )}
           />
