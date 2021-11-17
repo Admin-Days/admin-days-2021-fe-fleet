@@ -53,26 +53,23 @@
     align-items: flex-start
 
 .buttonWrapper
-  display: grid
-  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr))
-  column-gap: 0.5rem
-  +t
-    display: flex
-    width: 100%
-    justify-content: center
-    flex-wrap: wrap
-    column-gap: 0
-  +m
-    display: none
+  display: flex
+  width: 100%
+  justify-content: center
+  flex-wrap: wrap
+  column-gap: 0
   .button
-    margin: auto
+    margin: 0 20px
     display: grid
     grid-template-columns: 32px auto
     width: fit-content
     padding: 1rem
     white-space: nowrap
-    +t
-      grid-template-columns: 24px auto
+    border-radius: 16px
+    border: 1px solid white
+    +m
+      width: 100%
+      margin: 8px 0
     .icon
       margin: auto
     span
@@ -90,26 +87,11 @@
       +t
         margin-left: 0.75rem
     &.active
-      border-radius: 16px
       background: #48405F
+      border: none
 
 .nextPrevWrapper
   display: none
-  +m
-    display: grid
-    grid-template-columns: repeat(auto-fill, minmax(1rem, 1fr))
-    column-gap: 2rem
-    margin-left: 2rem
-  +s
-    margin-left: 1rem
-  button
-    height: 40px
-    width: 40px
-    &:hover
-      box-shadow: inset 0 0 0 2px #353945
-      border-radius: 50%
-    .arrow
-      fill: #E6E8EC
 
 .modalContent
   display: flex

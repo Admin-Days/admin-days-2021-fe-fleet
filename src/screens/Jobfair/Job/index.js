@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 import { setDarkMode } from "../../../utils/dark";
-import Main from "./Main";
 
 import firebaseConfig from "../../../utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
@@ -106,9 +105,7 @@ const JobfairJob = () => {
   }, [company, companyLoading]);
 
   return (
-    <>
-      <Main />
-    </>
+    <h1>ok</h1>
   );
 };
 
