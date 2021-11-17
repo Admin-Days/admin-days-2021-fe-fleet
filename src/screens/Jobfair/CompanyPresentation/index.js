@@ -65,7 +65,7 @@ const CompanyPresentation = () => {
   };
 
   return (
-    <div className={cn("container", styles.container)}>
+    <>
       <Main
         onRegister={() => {
           if (userAuth == null || userAuth.isAnonymous) {
@@ -114,7 +114,7 @@ const CompanyPresentation = () => {
           </p>
         </div>
       </Modal>
-    </div>
+    </>
   );
 };
 
