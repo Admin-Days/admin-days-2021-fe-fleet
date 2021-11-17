@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+
+import styles from "./JobFairHub.module.sass"; 
 import { setDarkMode } from "../../../utils/dark";
-import styles from "./JobFairHub.module.sass";
+
+import Icon from "../../../components/Icon";
 
 const JobFairHub = () => {
   const history = useHistory();
@@ -12,16 +15,27 @@ const JobFairHub = () => {
 
   return (
     <div className={styles.section}>
+      <button
+        className={styles.back_btn}
+        onClick={() => history.push("/jobfair/company-visit")}
+      >
+        <Icon name="back" color="#777E91" size="28" viewBox="0 -3 28 28" />
+        <span>Back</span>
+      </button>
+
       <h1>Job & Intership Fair Hub</h1>
+
       <div className={styles.image}>
         <div
           onClick={() => history.push("/jobfair/company-visit")}
           className={styles.cp}
         ></div>
+
         <div
           onClick={() => history.push("/jobfair/company-presentation")}
           className={styles.cv}
         ></div>
+
         <picture>
           <source
             srcSet="/assets/jobfair-hub-m.png"

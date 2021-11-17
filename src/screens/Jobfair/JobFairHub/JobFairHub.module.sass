@@ -1,6 +1,8 @@
 @import ../../../styles/helpers
 
 .section
+  user-select: none
+
   h1
     width: 100%
     padding: 20px
@@ -19,6 +21,24 @@
     +m
       font-size: 54px
 
+  .back_btn
+    margin-top: 2rem
+    margin-left: 10rem
+    display: flex
+    align-items: center
+    font-family: Jost
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: -0.02em
+    color: #777E90
+    z-index: 100
+    +x
+      margin-left: 4rem
+    +m
+      margin-left: 2rem
+
   .image
     position: relative
     .cp
@@ -27,6 +47,7 @@
       position: absolute
       top: 12vw
       left: 15vw
+      cursor: pointer
       +m
         width: 50vw
         left: auto
@@ -40,13 +61,14 @@
       position: absolute
       top: 12vw
       right: 15vw
+      cursor: pointer
       +m
         width: 55vw
         right: auto
         left: 12vw
         top: 72vw
         height: 50vw
-        
+
     img
       width: 100%
       height: auto

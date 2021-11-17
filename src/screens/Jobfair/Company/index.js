@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+
+import cn from "classnames";
+import styles from "./Company.module.sass";
+
 import { companies, jobs as jobsData } from "../../../mocks/jobfair";
 import { setDarkMode } from "../../../utils/dark";
-import styles from "./Company.module.sass";
-import cn from "classnames";
+
 import Icon from "../../../components/Icon";
 import { getYoutubeId } from "../../../utils/video";
 
@@ -39,14 +42,16 @@ const Company = () => {
                 size="28"
                 viewBox="0 -3 28 28"
               />
-              <span>back</span>
+              <span>Back</span>
             </button>
+
             <div className={styles.row_top}>
               <img
                 className={styles.logo}
                 src={companyData.logoUrl.src}
                 alt="company-logo"
               />
+
               <div className={styles.icons}>
                 {companyData.linkedin && (
                   <a
@@ -57,6 +62,7 @@ const Company = () => {
                     <img src="/assets/icons/linkedin.png" alt="linkedin" />
                   </a>
                 )}
+
                 {companyData.instagram && (
                   <a
                     target="_blank"
@@ -66,6 +72,7 @@ const Company = () => {
                     <img src="/assets/icons/instagram.png" alt="instagram" />
                   </a>
                 )}
+
                 {companyData.twitter && (
                   <a
                     target="_blank"
@@ -75,6 +82,7 @@ const Company = () => {
                     <img src="/assets/icons/twitter.png" alt="twitter" />
                   </a>
                 )}
+
                 {companyData.youtube && (
                   <a
                     target="_blank"
@@ -86,6 +94,7 @@ const Company = () => {
                 )}
               </div>
             </div>
+
             <div className={styles.row_main}>
               <div
                 className={styles.left}
@@ -95,6 +104,7 @@ const Company = () => {
               >
                 <h2>{companyData.name}</h2>
                 <p>{companyData.description}</p>
+
                 {companyData.brochure && (
                   <div className={styles.buttonWrapper}>
                     <a
@@ -104,6 +114,7 @@ const Company = () => {
                     >
                       Visit
                     </a>
+
                     <div className={styles.gap}></div>
                     <a
                       target="_blank"
@@ -115,6 +126,7 @@ const Company = () => {
                   </div>
                 )}
               </div>
+
               {companyData.video && (
                 <div className={styles.right}>
                   <iframe
@@ -131,8 +143,10 @@ const Company = () => {
               )}
             </div>
           </div>
+
           <div className={styles.card}>
             <h1>Available Openings</h1>
+            
             <div className={styles.row_jobs}>
               <div className={styles.job_items}>
                 {jobs.map((job, i) => (
@@ -148,11 +162,13 @@ const Company = () => {
                   </div>
                 ))}
               </div>
+
               <div className={styles.description}>
                 <div className={styles.description_top}>
                   <h5>{`Job length : ${jobs[jobIndex].duration}`}</h5>
                   <h5>{`Location : ${jobs[jobIndex].workFrom}`}</h5>
                 </div>
+
                 <p>{jobs[jobIndex].description}</p>
                 <div className={styles.buttonWrapper}>
                   <button>Apply</button>
