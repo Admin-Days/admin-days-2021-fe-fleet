@@ -64,14 +64,17 @@ const Company = () => {
             </div>
           </div>
           <div className={styles.row_main}>
-            <div className={styles.left} style={!companyData.video ? {width: "100%"} : {width: "50%"}}>
+            <div
+              className={styles.left}
+              style={!companyData.video ? { width: "100%" } : { width: "50%" }}
+            >
               <h2>{companyData.name}</h2>
               <p>{companyData.description}</p>
-              <div className={styles.buttonWrapper}>
-                <button>Visit</button>
-                <div className={styles.gap}></div>
-                <button>See pamphlet</button>
-              </div>
+              {companyData.brochure && (
+                <div className={styles.buttonWrapper}>
+                  <a href={companyData.brochure.src}>See pamphlet</a>
+                </div>
+              )}
             </div>
             {companyData.video && (
               <div className={styles.right}>
