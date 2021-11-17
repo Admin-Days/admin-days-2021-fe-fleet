@@ -17,7 +17,7 @@ const JobFairHub = () => {
     <div className={styles.section}>
       <button
         className={styles.back_btn}
-        onClick={() => history.push("/jobfair/company-visit")}
+        onClick={() => history.push("/jobfair")}
       >
         <Icon name="back" color="#777E91" size="28" viewBox="0 -3 28 28" />
         <span>Back</span>
