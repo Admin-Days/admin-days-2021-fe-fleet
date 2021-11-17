@@ -7,7 +7,6 @@ import { setDarkMode } from "../../../utils/dark";
 
 import Icon from "../../../components/Icon";
 import { companies, jobs } from "../../../mocks/jobfair";
-import { getYoutubeId } from "../../../utils/video";
 
 const JobfairJob = () => {
   const history = useHistory();
