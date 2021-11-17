@@ -74,7 +74,7 @@ const JobfairJob = () => {
         logoUrl: data.logoUrl, // To access, use logoUrl.src (if not undefined)
         address: data.address,
         description: data.description,
-        website: data.website,
+        website: data.websiteUrl,
         header: data.headerUrl, // To access, use headerUrl.src (if not undefined)
         linkedin: data.linkedin,
         twitter: data.twitter,

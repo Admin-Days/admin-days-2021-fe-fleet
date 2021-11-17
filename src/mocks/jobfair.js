@@ -36,6 +36,7 @@ export const companies = [
       src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2F3mhHdJiBqjZ7WPzaVetJ%2FbrochureUrl?alt=media&token=1bb298c3-8bc7-4ea7-ba27-9514a6a75dea",
     },
     image: "/assets/jobfair-mazars.png",
+    website: "https://www.mazars.id/",
   },
   {
     id: "8KqRAC0uXv4ZyYzWWtSn",
@@ -51,7 +52,8 @@ export const companies = [
     instagram: "https://www.instagram.com/dojobox.id/",
     youtube: "https://www.youtube.com/channel/UCg-GF1tOefIL_dPZdwTBv0g",
     video: "https://www.youtube.com/watch?v=i7Q9g1WbHRk",
-    image: "/assets/jobfair-dojobox.png"
+    image: "/assets/jobfair-dojobox.png",
+    website: "https://dojobox.id/",
   },
   {
     id: "KWAlG10RHrT49IhZoyWu",
@@ -65,7 +67,8 @@ export const companies = [
       "Inamart adalah mitra korporasi bisnis untuk mengembangkan solusi komprehensif teknologi blockchain dalam bentuk trust protocol sehingga memungkinkan interaksi langsung antara dua (atau lebih) jenis pengguna terafiliasi yang berbeda, dan menjadikannya berdaya dalam membangun komunitasnya.",
     linkedin: "https://www.linkedin.com/company/pt-inamart-sukses-jaya/",
     video: "https://youtu.be/MeOUJfp8h0w",
-    image: "/assets/jobfair-inamart.png"
+    image: "/assets/jobfair-inamart.png",
+    website: "www.inamart.co.id",
   },
   {
     id: "NEWCHLvUPLyHwlQnHG0W",
@@ -77,6 +80,7 @@ export const companies = [
     description:
       'Selaras dengan Visi-Misi dari Presiden dan Wakil Presiden Republik Indonesia, Visi dari Kementerian PPN/Bappenas Tahun 2020-2024:\n“Perencanaan Pembangunan Nasional yang berkualitas dan kredibel untuk mewujudkan Indonesia Maju yang Berdaulat, Mandiri, dan Berkepribadian Berlandaskan Gotong Royong” \n\nSejalan dengan itu, pengertian kata berkualitas dan kredibel terkait dengan pernyataan visi dapat dijelaskan sebagai berikut:\n- Berkualitas :\nPerencanaan yang dihasilkan menjadi acuan/pedoman bagi Kementerian/Lembaga/Daerah dalam menyusun perencanaan pembangunan dan melaksanakan program dan kegiatannya masing-masing; produk perencanaan dan penganggaran yang dihasilkan dapat diimplementasikan secara selaras antar sektor, antara pusat dan daerah, dan antardaerah; dan kelembagaan menerapkan prinsip-prinsip good and clean governance.\n- Kredibel : \nPerencanaan yang berdasarkan pertimbangan atas pengetahuan, informasi, dan data yang terkini (evidence based) dengan mekanisme pelaksanaan (delivery mechanism) secara partisipatif dan berorientasi ke depan."',
     image: "/assets/jobfair-bappenas.png",
+    website: "https://www.bappenas.go.id/id/",
   },
   {
     id: "SQnQczfzN6jiIcdvttFK",
@@ -98,6 +102,7 @@ export const companies = [
       src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FSQnQczfzN6jiIcdvttFK%2FbrochureUrl?alt=media&token=6904716e-cfd3-40b3-b3af-37f676b8d37b",
     },
     image: "/assets/jobfair-ojk.png",
+    website: "ojk.go.id",
   },
   {
     id: "jNd9uytzkEonriOknTdi",
@@ -116,6 +121,7 @@ export const companies = [
       src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FjNd9uytzkEonriOknTdi%2FbrochureUrl?alt=media&token=c3a4a4f5-736a-494f-a5bb-c4ce8c5308b8",
     },
     image: "/assets/jobfair-kemenkeu.png",
+    website: "https://www.kemenkeu.go.id/",
   },
   {
     id: "qmaCEX9LaFRsQJWaOtrE",
@@ -136,6 +142,7 @@ export const companies = [
     video:
       "https://drive.google.com/file/d/1ZLTzpGN5duLOGIiwJWpSDjkNeTbZqKNz/view?usp=sharing",
     image: "/assets/jobfair-lkpp.png",
+    website: "www.lkpp.go.id",
   },
   {
     id: "uXr6oC9yo5ne3M2dRrOb",
@@ -152,6 +159,7 @@ export const companies = [
     facebook: "https://facebook.com/RSMAAJ.ID/",
     youtube: "https://youtube.com/channel/UCDflfrcPT6y7A3Oeo9-9v2w",
     image: "/assets/jobfair-rsm.png",
+    website: "www.rsm.id",
   },
   {
     id: "v6tnZ8QbfYijxPd3GE1a",
@@ -172,6 +180,7 @@ export const companies = [
       src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2Fv6tnZ8QbfYijxPd3GE1a%2FbrochureUrl?alt=media&token=1f6ab62c-3c91-4f05-a78e-ecd395040234",
     },
     image: "/assets/jobfair-keyta.png",
+    website: "https://keyta.id/",
   },
 ];
 

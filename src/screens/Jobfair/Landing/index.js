@@ -11,7 +11,7 @@ import {
   getFirestore,
 } from "firebase/firestore";
 import Grid from "./Grid";
-import JobfairCarousel from "./JobfairCarousel";
+import MockUp from "./MockUp";
 
 initializeApp(firebaseConfig);
 const db = getFirestore();
@@ -37,7 +37,7 @@ const JobfairLanding = () => {
         logoUrl: data.logoUrl, // To access, use logoUrl.src (if not undefined)
         address: data.address,
         description: data.description,
-        website: data.website,
+        website: data.websiteUrl,
         header: data.headerUrl, // To access, use headerUrl.src (if not undefined)
         linkedin: data.linkedin,
         twitter: data.twitter,
@@ -104,7 +104,7 @@ const JobfairLanding = () => {
     <>
       <Main companies={companies} jobs={jobs}/>
       <Grid />
-      <JobfairCarousel />
+      <MockUp />
     </>
   );
 };
