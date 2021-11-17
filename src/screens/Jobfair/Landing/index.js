@@ -102,7 +102,7 @@ const JobfairLanding = () => {
 
   return (
     <>
-      <Main />
+      <Main companies={companies} jobs={jobs}/>
       <Grid />
       <JobfairCarousel />
     </>

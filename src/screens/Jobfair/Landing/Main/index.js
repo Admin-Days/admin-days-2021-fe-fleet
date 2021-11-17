@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import cn from "classnames";
 import styles from "./Main.module.sass";
 import Panel from "../../../../components/Panel";
 
-const Main = () => {
+const Main = ({companies, jobs}) => {
+
   return (
     <div className={cn("section", styles.section)}>
       <div className={cn("container", styles.container)}>
@@ -31,22 +32,22 @@ const Main = () => {
           <div className={styles.row}>
             <div className={cn("info", styles.panelInfo)}>
               <div className={styles.item}>
-                <h2>10</h2>
+                <h2>{companies.length}</h2>
                 <h5>Companies</h5>
               </div>
               <div className={styles.itemGap}></div>
               <div className={styles.item}>
-                <h2>10</h2>
+                <h2>{jobs.length}</h2>
                 <h5>Jobs</h5>
               </div>
               <div className={styles.itemGap}></div>
               <div className={styles.item}>
-                <h2>10</h2>
+                <h2>{jobs.filter(e => e.isInternship).length}</h2>
                 <h5>Internships</h5>
               </div>
               <div className={styles.itemGap}></div>
               <div className={styles.item}>
-                <h2>10</h2>
+                <h2>{jobs.filter(e => e.isFullTime).length}</h2>
                 <h5>Full Times</h5>
               </div>
             </div>
