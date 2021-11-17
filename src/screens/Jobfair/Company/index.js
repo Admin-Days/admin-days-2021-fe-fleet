@@ -12,8 +12,10 @@ import { getYoutubeId } from "../../../utils/video";
 
 const Company = () => {
   const { companyId } = useParams();
+
   const [companyData, setCompanyData] = useState();
   const [jobs, setJobs] = useState([]);
+
   const [jobIndex, setJobIndex] = useState(0);
 
   const history = useHistory();
@@ -121,7 +123,7 @@ const Company = () => {
                       rel="noreferrer"
                       href={companyData.brochure.src}
                     >
-                      See pamphlet
+                      See Brochure
                     </a>
                   </div>
                 )}
@@ -151,8 +153,8 @@ const Company = () => {
               <div className={styles.job_items}>
                 {jobs.map((job, i) => (
                   <div
-                    onClick={() => setJobIndex(i)}
                     id={job.id}
+                    onClick={() => setJobIndex(i)}
                     className={cn(styles.job_item, {
                       [styles.active]: jobIndex === i,
                     })}
@@ -165,14 +167,15 @@ const Company = () => {
 
               <div className={styles.description}>
                 <div className={styles.description_top}>
-                  <h5>{`Job length : ${jobs[jobIndex].duration}`}</h5>
-                  <h5>{`Location : ${jobs[jobIndex].workFrom}`}</h5>
+                  {jobs[jobIndex].duration && <h5>{`Job duration : ${jobs[jobIndex].duration}`}</h5>}
+                  {jobs[jobIndex].workFrom && <h5>{`Location : ${jobs[jobIndex].workFrom}`}</h5>}
                 </div>
 
                 <p>{jobs[jobIndex].description}</p>
+
                 <div className={styles.buttonWrapper}>
-                  <button>Apply</button>
-                  <button>Learn More</button>
+                  <button onClick={() => history.push(`/jobfair/apply/${jobs[jobIndex].id}`)}>Apply</button>
+                  <button onClick={() => history.push(`/jobfair/job/${jobs[jobIndex].id}`)}>Learn More</button>
                 </div>
               </div>
             </div>
