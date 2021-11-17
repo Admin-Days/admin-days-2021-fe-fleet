@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import cn from "classnames";
 import styles from "./Main.module.sass";
 import Panel from "../../../../components/Panel";
+import { useHistory } from "react-router-dom";
 
 const Main = ({companies, jobs}) => {
+
+  const history = useHistory()
 
   return (
     <div className={cn("section", styles.section)}>
@@ -51,6 +54,7 @@ const Main = ({companies, jobs}) => {
                 <h5>Full Times</h5>
               </div>
             </div>
+            <button onClick={() => history.push("/jobfair/hub")} className={styles.button}>Join today</button>
           </div>
         </Panel>
       </div>

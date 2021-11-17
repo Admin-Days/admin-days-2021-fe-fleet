@@ -12,7 +12,7 @@ const JobFairHub = () => {
 
   return (
     <div className={styles.section}>
-      <h1>Job Fair Hub</h1>
+      <h1>Job & Intership Fair Hub</h1>
       <div className={styles.image}>
         <div
           onClick={() => history.push("/jobfair/company-visit")}

@@ -9,6 +9,7 @@
   +m
     grid-template-rows: 1fr repeat(2, 200px)
     grid-template-columns: 1fr 1fr
+    padding-top: 64px
   .text
     grid-row: 1 / span 2
     grid-column: 1 / span 1
@@ -30,15 +31,16 @@
       line-height: 32px
       letter-spacing: -0.01em
       color: #777E91
+      margin-bottom: 12px
     h2
       font-family: DM Sans
       font-style: normal
       font-weight: bold
-      font-size: 48px
-      line-height: 56px
+      font-size: 40px
+      line-height: 44px
       letter-spacing: -0.02em
       color: #FCFCFD
-      margin-bottom: 2rem
+      margin-bottom: 1.5rem
     p
       +jost
       font-style: normal
@@ -47,6 +49,26 @@
       line-height: 20px
       letter-spacing: -0.01em
       color: #777E90
+
+    .button
+      +jost
+      font-style: normal
+      font-weight: 500
+      font-size: 18px
+      line-height: 16px
+      text-align: center
+      color: #FCFCFD
+      padding: 16px 20px
+      background: #FF884A
+      border-radius: 24px
+      white-space: nowrap
+      margin: auto
+      margin-top: 24px
+      display: block
+      +m
+        width: 60%
+      +s
+        width: 100%
 
   .top
     grid-column: 2 / span 6
@@ -82,4 +104,3 @@
       object-fit: cover
       object-position: center
       border-radius: 24px
-

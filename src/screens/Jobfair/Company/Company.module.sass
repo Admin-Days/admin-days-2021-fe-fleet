@@ -1,0 +1,103 @@
+@import ../../../styles/helpers
+
+.card
+  width: 100%
+  background: #2B243F
+  border: 2px solid #353945
+  box-sizing: border-box
+  box-shadow: 0px 32px 64px -32px rgba(15, 15, 15, 0.1)
+  border-radius: 24px
+  padding: 4rem
+  +m
+    padding: 16px
+  .back_btn
+    display: flex
+    align-items: center
+    font-family: Jost
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: -0.02em
+    color: #777E90
+  .row_top
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    +t
+      flex-direction: column-reverse
+      align-items: flex-start
+    .logo
+      width: 200px
+      margin: 32px 0
+    .icons
+      width: 100%
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 48px
+      +t
+        justify-content: flex-start
+        margin-bottom: 0
+        margin-top: 20px
+      a
+        margin-left: 20px
+        &:first-child
+          margin-left: 0
+
+  .row_main
+    display: flex
+    align-items: flex-start
+    +t
+      flex-direction: column
+  .left
+    padding-right: 24px
+    +t
+      width: 100% !important
+      padding-right: 0
+      padding-bottom: 20px
+    h2
+      font-family: DM Sans
+      font-style: normal
+      font-weight: bold
+      font-size: 32px
+      line-height: 40px
+      letter-spacing: -0.02em
+      color: #FFFFFF
+      margin-bottom: 32px
+    p
+      font-family: Jost
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 23px
+      color: #FFFFFF
+      white-space: pre-wrap
+    .buttonWrapper
+      display: flex
+      +m
+        flex-direction: column
+      .gap
+        width: 20px
+        height: 0
+      button
+        +jost
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 16px
+        text-align: center
+        color: #FCFCFD
+        padding: 16px 20px
+        background: #FF884A
+        border-radius: 24px
+        white-space: nowrap
+        margin-top: 24px
+        min-width: 180px
+        &:last-child
+          background: #777E90
+
+  .right
+    padding-top: 12px
+    width: 50%
+    +t
+      width: 100%

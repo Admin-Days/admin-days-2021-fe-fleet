@@ -109,7 +109,7 @@
 
 .panel
     +m
-        transform: translateY(64px)
+        transform: translateY(96px)
 
 .panelButton
     display: none
@@ -119,10 +119,12 @@
     width: 100%
 .row
     width: 100%
+    align-items: center
+
 .panelInfo
     display: flex
     flex-wrap: wrap
-    justify-content: space-around
+    justify-content: space-evenly
     align-items: center
     width: 100%
     max-width: 800px
@@ -157,3 +159,23 @@
             margin-top: 0px
             +m
                 color: rgba(255, 255, 255, 0.7)
+
+.button
+    +jost
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 16px
+    text-align: center
+    color: #FCFCFD
+    padding: 16px 20px
+    background: #FF884A
+    border-radius: 24px
+    white-space: nowrap
+    +m
+        margin: auto
+        display: block
+        margin-top: 24px
+        width: 60%
+    +s
+        width: 100%

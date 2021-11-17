@@ -2,7 +2,7 @@ export const jobfair = [
   {
     id: "cp",
     title: "Company Presentation",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac eget tortor congue ac feugiat. Condimentum massa eu sollicitudin ultricies nec neque auctor nam mattis. Velit neque varius rhoncus semper penatibus posuere. Sit eget odio.",
+    desc: "Watch as companies present various topics around administrative sciences in this Administration Days event.",
     url: "#",
     icon: "MdOutlineVideoLibrary",
     ilustration: "/assets/jobfair-company-presentation.png",
@@ -10,7 +10,7 @@ export const jobfair = [
   {
     id: "cv",
     title: "Company Visit",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac eget tortor congue ac feugiat. Condimentum massa eu sollicitudin ultricies nec neque auctor nam mattis. Velit neque varius rhoncus semper penatibus posuere. Sit eget odio.",
+    desc: "Company visit allows FIA students to explore and discover the various companies of Administration Days. Here students can interact, visit, and even apply for jobs and openings from each company. What’re you waiting for? Explore now.",
     url: "#",
     icon: "MdPersonPinCircle",
     ilustration: "/assets/jobfair-company-visit.png",

@@ -7,18 +7,15 @@ const Grid = () => {
     <div className={cn(styles.grid, "container")}>
       <div className={styles.text}>
         <h4>Get to know</h4>
-        <h2>Jobfair</h2>
+        <h2>Job & Intership Fair</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
-          scelerisque velit bibendum quisque nunc urna. Pellentesque netus
-          tempus dis nec leo. Ac turpis etiam nisi nulla est facilisis
-          pellentesque. Sed commodo hendrerit dolor in maecenas duis a ac
-          tortor. Quisque elementum ipsum ut ligula viverra diam arcu. Nullam
-          cursus imperdiet ut aliquet elementum tristique mi non. Condimentum ut
-          euismod integer fermentum varius praesent. Nec justo, tincidunt at sit
-          vitae tristique cras mattis. Consectetur nam ornare molestie erat at
-          sagittis duis diam sollicitudin.
+          Job and Internship Fair is one of a series of Administration Days
+          events to accommodate FIA ​​UI students to meet virtually with
+          companies that open job vacancies/internships by the job prospects of
+          the majors at FIA UI. In addition, there are also company
+          presentations through virtual meetings.
         </p>
+        <button className={styles.button}>Let's go</button>
       </div>
       <div className={cn(styles.top, styles.item)}>
         <img src="assets/jobfair-top.jpg" alt="" />
