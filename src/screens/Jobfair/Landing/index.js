@@ -10,6 +10,8 @@ import {
   getDocs,
   getFirestore,
 } from "firebase/firestore";
+import Grid from "./Grid";
+import JobfairCarousel from "./JobfairCarousel";
 
 initializeApp(firebaseConfig);
 const db = getFirestore();
@@ -101,6 +103,8 @@ const JobfairLanding = () => {
   return (
     <>
       <Main />
+      <Grid />
+      <JobfairCarousel />
     </>
   );
 };

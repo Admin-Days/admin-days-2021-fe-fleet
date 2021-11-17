@@ -1,0 +1,85 @@
+@import ../../../../styles/helpers
+
+.grid
+  display: grid
+  grid-template-rows: 1fr 1fr
+  grid-template-columns: 320px repeat(6, minmax(20px, 1fr) )
+  gap: 20px
+  width: 100%
+  +m
+    grid-template-rows: 1fr repeat(2, 200px)
+    grid-template-columns: 1fr 1fr
+  .text
+    grid-row: 1 / span 2
+    grid-column: 1 / span 1
+    background: #2B243F
+    border: 2px solid #353945
+    box-sizing: border-box
+    border-radius: 24px
+    padding: 32px
+    width: 320px
+    +m
+      grid-row: 1 / span 1
+      grid-column: 1 / span 2
+      width: 100%
+    h4
+      +jost
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: -0.01em
+      color: #777E91
+    h2
+      font-family: DM Sans
+      font-style: normal
+      font-weight: bold
+      font-size: 48px
+      line-height: 56px
+      letter-spacing: -0.02em
+      color: #FCFCFD
+      margin-bottom: 2rem
+    p
+      +jost
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      letter-spacing: -0.01em
+      color: #777E90
+
+  .top
+    grid-column: 2 / span 6
+    +m
+      grid-row: 2 / span 1
+      grid-column: 1 / span 1
+  .bot_1
+    grid-column: 2 / span 2
+    +t
+      grid-column: 2 / span 3
+    +m
+      grid-row: 2 / span 1
+      grid-column: 2 / span 1
+  .bot_2
+    grid-column: 4 / span 2
+    +t
+      grid-column: 5 / span 3
+    +m
+      grid-row: 3 / span 1
+      grid-column: 1 / span 1
+  .bot_3
+    grid-column: 6 / span 2
+    +t
+      display: none
+    +m
+      grid-row: 3 / span 1
+      grid-column: 2 / span 1
+      display: inline-block
+  .item
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      object-position: center
+      border-radius: 24px
+
