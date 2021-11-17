@@ -42,22 +42,22 @@ const Company = () => {
             />
             <div className={styles.icons}>
               {companyData.linkedin && (
-                <a href={companyData.linkedin}>
+                <a target="_blank" rel="noreferrer" href={companyData.linkedin}>
                   <img src="/assets/icons/linkedin.png" alt="linkedin" />
                 </a>
               )}
               {companyData.instagram && (
-                <a href={companyData.instagram}>
+                <a target="_blank" rel="noreferrer" href={companyData.instagram}>
                   <img src="/assets/icons/instagram.png" alt="instagram" />
                 </a>
               )}
               {companyData.twitter && (
-                <a href={companyData.twitter}>
+                <a target="_blank" rel="noreferrer" href={companyData.twitter}>
                   <img src="/assets/icons/twitter.png" alt="twitter" />
                 </a>
               )}
               {companyData.youtube && (
-                <a href={companyData.youtube}>
+                <a target="_blank" rel="noreferrer" href={companyData.youtube}>
                   <img src="/assets/icons/youtube.png" alt="youtube" />
                 </a>
               )}
@@ -72,7 +72,7 @@ const Company = () => {
               <p>{companyData.description}</p>
               {companyData.brochure && (
                 <div className={styles.buttonWrapper}>
-                  <a href={companyData.brochure.src}>See pamphlet</a>
+                  <a target="_blank" rel="noreferrer" href={companyData.brochure.src}>See pamphlet</a>
                 </div>
               )}
             </div>
