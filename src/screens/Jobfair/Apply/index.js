@@ -107,6 +107,8 @@ const JobfairApply = () => {
               userPhoneNumber: phoneNumber,
               userEmail: email,
               jobId: jobId,
+              jobTitle: jobData.title,
+              companyName: companyData.name,
               attachmentUrl: {
                 src: link,
               },
@@ -124,6 +126,8 @@ const JobfairApply = () => {
           userPhoneNumber: phoneNumber,
           userEmail: email,
           jobId: jobId,
+          jobTitle: jobData.title,
+          companyName: companyData.name,
           createdTimeStamp: serverTimestamp(),
         });
 
