@@ -91,15 +91,7 @@ const JobfairLanding = () => {
     fetchCompanies();
     fetchJobs();
   }, []);
-
-  useEffect(() => {
-    if (!companiesLoading) console.log(companies);
-  }, [companies, companiesLoading]);
-
-  useEffect(() => {
-    if (!jobsLoading) console.log(jobs);
-  }, [jobs, jobsLoading]);
-
+  
   return (
     <>
       <Main companies={companies} jobs={jobs}/>

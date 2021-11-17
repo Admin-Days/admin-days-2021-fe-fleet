@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useHistory } from "react-router-dom";
+
 import cn from "classnames";
 import styles from "./Main.module.sass";
+
 import Panel from "../../../../components/Panel";
-import { useHistory } from "react-router-dom";
 
 const Main = ({companies, jobs}) => {
 
@@ -27,6 +29,7 @@ const Main = ({companies, jobs}) => {
             </div>
           </div>
         </div>
+
         <Panel
           className={styles.panel}
           classBody={styles.panelBody}
@@ -38,23 +41,27 @@ const Main = ({companies, jobs}) => {
                 <h2>{companies.length}</h2>
                 <h5>Companies</h5>
               </div>
+
               <div className={styles.itemGap}></div>
               <div className={styles.item}>
                 <h2>{jobs.length}</h2>
                 <h5>Jobs</h5>
               </div>
+
               <div className={styles.itemGap}></div>
               <div className={styles.item}>
                 <h2>{jobs.filter(e => e.isInternship).length}</h2>
                 <h5>Internships</h5>
               </div>
+
               <div className={styles.itemGap}></div>
               <div className={styles.item}>
                 <h2>{jobs.filter(e => e.isFullTime).length}</h2>
                 <h5>Full Times</h5>
               </div>
             </div>
-            <button onClick={() => history.push("/jobfair/hub")} className={styles.button}>Join today</button>
+            
+            <button className={styles.button} onClick={() => history.push("/jobfair/hub")}>Join today</button>
           </div>
         </Panel>
       </div>
