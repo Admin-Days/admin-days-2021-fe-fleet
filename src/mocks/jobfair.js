@@ -220,13 +220,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -269,7 +269,7 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -294,10 +294,10 @@ export const jobs = [
     responsibilities: [],
     majors: [
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
     ],
     isInternship: true,
@@ -332,10 +332,10 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
     ],
     isInternship: false,
@@ -394,13 +394,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -474,13 +474,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -521,7 +521,7 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -562,13 +562,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -600,13 +600,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -663,13 +663,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
     ],
     isInternship: true,
@@ -728,13 +728,13 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "BAS",
+        id: "Ilmu Administrasi Niaga",
       },
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
       {
-        id: "PAS",
+        id: "Ilmu Administrasi Negara",
       },
     ],
     isInternship: true,
@@ -766,7 +766,7 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
     ],
     isInternship: true,
@@ -804,7 +804,7 @@ export const jobs = [
     ],
     majors: [
       {
-        id: "FAS",
+        id: "Ilmu Administrasi Fiskal",
       },
     ],
     isInternship: false,

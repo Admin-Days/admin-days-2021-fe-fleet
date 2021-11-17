@@ -107,24 +107,30 @@ const Company = () => {
                 <h2>{companyData.name}</h2>
                 <p>{companyData.description}</p>
 
-                {companyData.brochure && (
+                {(companyData.brochure || companyData.website) && (
                   <div className={styles.buttonWrapper}>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href={companyData.website}
-                    >
-                      Visit
-                    </a>
+                    {companyData.website && (
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={companyData.website}
+                      >
+                        Visit
+                      </a>
+                    )}
 
-                    <div className={styles.gap}></div>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href={companyData.brochure.src}
-                    >
-                      See Brochure
-                    </a>
+                    {companyData.brochure && (
+                      <>
+                        <div className={styles.gap}></div>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href={companyData.brochure.src}
+                        >
+                          See Brochure
+                        </a>
+                      </>
+                    )}
                   </div>
                 )}
               </div>
@@ -148,7 +154,7 @@ const Company = () => {
 
           <div className={styles.card}>
             <h1>Available Openings</h1>
-            
+
             <div className={styles.row_jobs}>
               <div className={styles.job_items}>
                 {jobs.map((job, i) => (
@@ -167,15 +173,31 @@ const Company = () => {
 
               <div className={styles.description}>
                 <div className={styles.description_top}>
-                  {jobs[jobIndex].duration && <h5>{`Job duration : ${jobs[jobIndex].duration}`}</h5>}
-                  {jobs[jobIndex].workFrom && <h5>{`Location : ${jobs[jobIndex].workFrom}`}</h5>}
+                  {jobs[jobIndex].duration && (
+                    <h5>{`Job duration : ${jobs[jobIndex].duration}`}</h5>
+                  )}
+                  {jobs[jobIndex].workFrom && (
+                    <h5>{`Location : ${jobs[jobIndex].workFrom}`}</h5>
+                  )}
                 </div>
 
                 <p>{jobs[jobIndex].description}</p>
 
                 <div className={styles.buttonWrapper}>
-                  <button onClick={() => history.push(`/jobfair/apply/${jobs[jobIndex].id}`)}>Apply</button>
-                  <button onClick={() => history.push(`/jobfair/job/${jobs[jobIndex].id}`)}>Learn More</button>
+                  <button
+                    onClick={() =>
+                      history.push(`/jobfair/apply/${jobs[jobIndex].id}`)
+                    }
+                  >
+                    Apply
+                  </button>
+                  <button
+                    onClick={() =>
+                      history.push(`/jobfair/job/${jobs[jobIndex].id}`)
+                    }
+                  >
+                    Learn More
+                  </button>
                 </div>
               </div>
             </div>
