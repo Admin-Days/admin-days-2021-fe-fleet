@@ -22,6 +22,7 @@ import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
 import JobFairHub from "./screens/Jobfair/JobFairHub";
+import CompanyVisit from "./screens/Jobfair/CompanyVisit";
 
 initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -98,6 +99,16 @@ function App() {
             render={() => (
               <Page>
                 <JobFairHub />
+              </Page>
+            )}
+          />
+
+          <Route
+            exact
+            path="/jobfair/company-visit"
+            render={() => (
+              <Page>
+                <CompanyVisit />
               </Page>
             )}
           />

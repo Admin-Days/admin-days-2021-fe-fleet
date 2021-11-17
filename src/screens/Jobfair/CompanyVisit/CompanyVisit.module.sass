@@ -1,0 +1,35 @@
+@import ../../../styles/helpers
+
+.section
+  background-image: url("./assets/jobfair-company-visit-bg.svg")
+  background-size: contain
+  background-position: top
+  background-repeat: no-repeat
+  h1
+    padding-top: 10vw
+    font-family: DM Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 96px
+    line-height: 96px
+    text-align: center
+    letter-spacing: -0.02em
+    color: #FFFFFF
+    margin-bottom: 20vw
+    +m
+      font-size: 48px
+
+  .companies
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    img
+      flex: 1 0 21%
+      width: 30vw
+      margin: 40px
+      max-width: 400px
+      +t
+        flex: 0 0 auto
+      +m
+        width: 80vw
+        max-width: 300px

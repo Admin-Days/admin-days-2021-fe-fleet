@@ -24,7 +24,7 @@ const JobFairHub = () => {
         ></div>
         <picture>
           <source
-            srcset="/assets/jobfair-hub-m.png"
+            srcSet="/assets/jobfair-hub-m.png"
             media="(max-width: 767px)"
           />
           <img src="/assets/jobfair-hub.jpg" alt="Job Fair Hub" />
