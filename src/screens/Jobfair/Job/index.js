@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { useAuthContext } from "../../../contexts/AuthContext";
 
 import cn from "classnames";
 import styles from "./JobfairJob.module.sass";
 import { setDarkMode } from "../../../utils/dark";
 
 import Icon from "../../../components/Icon";
+import Loader from "../../../components/Loader";
+import Modal from "../../../components/Modal";
+
 import { companies, jobs } from "../../../mocks/jobfair";
+
+import firebaseConfig from "../../../utils/firebaseConfig";
+import { initializeApp } from "firebase/app";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+
+initializeApp(firebaseConfig);
+const db = getFirestore();
 
 const JobfairJob = () => {
   const history = useHistory();
   const { jobId } = useParams();
+  const { userAuth } = useAuthContext();
 
   const [jobData, setJobData] = useState([]);
   const [companyData, setCompanyData] = useState();
@@ -28,11 +40,48 @@ const JobfairJob = () => {
     );
   }, [jobId]);
 
+  const [loading, setLoading] = useState(false);
+
+  const apply = async () => {
+    setLoading(true);
+
+    if (userAuth == null || userAuth.isAnonymous) {
+      alert("Please sign in to apply!");
+      setLoading(false);
+      return;
+    }
+
+    const applicationsRef = collection(db, "applications");
+    const applicationsSnapshot = await getDocs(applicationsRef);
+
+    let alreadyApplied;
+    applicationsSnapshot.forEach((doc) => {
+      alreadyApplied =
+        doc.data().jobId === jobId && doc.data().userId === userAuth.uid;
+    });
+
+    if (alreadyApplied) {
+      alert("You have already applied to this job!");
+      setLoading(false);
+      return;
+    }
+
+    setLoading(false);
+    history.push(`/jobfair/apply/${jobData.id}`);
+  };
+
+  if (!companyData) return <></>;
+
   return (
-    <div className={cn(styles.section, "container")}>
-      {companyData && (
+    <>
+      <div className={cn(styles.section, "container")}>
         <div className={styles.card}>
-          <button className={styles.back_btn} onClick={() => history.goBack()}>
+          <button
+            className={styles.back_btn}
+            onClick={() =>
+              history.push(`/jobfair/company-visit/${companyData.id}`)
+            }
+          >
             <Icon name="back" color="#777E91" size="28" viewBox="0 -3 28 28" />
             <span>Back</span>
           </button>
@@ -147,11 +196,7 @@ const JobfairJob = () => {
             )}
 
             <div className={styles.buttonWrapper} style={{ marginTop: "10px" }}>
-              <button
-                onClick={() => history.push(`/jobfair/apply/${jobData.id}`)}
-              >
-                Apply
-              </button>
+              <button onClick={apply}>Apply</button>
 
               {jobData.attachmentUrl && (
                 <>
@@ -160,6 +205,7 @@ const JobfairJob = () => {
                     target="_blank"
                     rel="noreferrer"
                     href={jobData.attachmentUrl.src}
+                    style={{ backgroundColor: "#777E90" }}
                   >
                     See Attachment
                   </a>
@@ -168,8 +214,15 @@ const JobfairJob = () => {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+
+      <Modal visible={loading}>
+        <div className={styles.loadingContainer}>
+          <Loader className={styles.loader} />
+          <h1 className={styles.loadingText}>Loading...</h1>
+        </div>
+      </Modal>
+    </>
   );
 };
 

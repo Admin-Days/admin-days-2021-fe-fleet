@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { setDarkMode } from "../../../utils/dark";
 
+import Grid from "./Grid";
 import Main from "./Main";
+import MockUp from "./MockUp";
 
 import firebaseConfig from "../../../utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
@@ -10,8 +12,6 @@ import {
   getDocs,
   getFirestore,
 } from "firebase/firestore";
-import Grid from "./Grid";
-import MockUp from "./MockUp";
 
 initializeApp(firebaseConfig);
 const db = getFirestore();

@@ -185,13 +185,7 @@ const Company = () => {
 
                 <div className={styles.buttonWrapper}>
                   <button
-                    onClick={() =>
-                      history.push(`/jobfair/apply/${jobs[jobIndex].id}`)
-                    }
-                  >
-                    Apply
-                  </button>
-                  <button
+                    style={{ backgroundColor: "#FF884A" }}
                     onClick={() =>
                       history.push(`/jobfair/job/${jobs[jobIndex].id}`)
                     }

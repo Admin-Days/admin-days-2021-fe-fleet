@@ -18,6 +18,7 @@ import { initializeApp } from "firebase/app";
 import {
   addDoc,
   collection,
+  getDocs,
   getFirestore,
   serverTimestamp,
 } from "firebase/firestore";
@@ -39,17 +40,42 @@ const JobfairApply = () => {
     setDarkMode();
   }, []);
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   useEffect(() => {
+    if (!jobId) return;
+
+    setLoading(true);
+
     setJobData(jobs.filter((job) => job.id === jobId)[0]);
     setCompanyData(
       companies.filter(
         (com) => com.id === jobs.filter((job) => job.id === jobId)[0].companyId
       )[0]
     );
-  }, [jobId]);
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+    const checkApplied = async () => {
+      const applicationsRef = collection(db, "applications");
+      const applicationsSnapshot = await getDocs(applicationsRef);
+
+      let alreadyApplied;
+      applicationsSnapshot.forEach((doc) => {
+        alreadyApplied =
+          doc.data().jobId === jobId && doc.data().userId === userAuth.uid;
+      });
+
+      if (alreadyApplied) {
+        setLoading(false);
+        alert("You have already applied to this job!");
+        history.push(`/jobfair/job/${jobData.id}`);
+        return;
+      }
+
+      setLoading(false);
+    };
+    checkApplied();
+  }, [jobId]);
 
   const applyJob = async (e) => {
     e.preventDefault();
@@ -117,7 +143,10 @@ const JobfairApply = () => {
         <Loader className={styles.loader} />
       ) : (
         <div className={cn("container", styles.container)}>
-          <button className={styles.back_btn} onClick={() => history.goBack()}>
+          <button
+            className={styles.back_btn}
+            onClick={() => history.push(`/jobfair/job/${jobData.id}`)}
+          >
             <Icon name="back" color="#777E91" size="28" viewBox="0 -3 28 28" />
             <span>Back</span>
           </button>
