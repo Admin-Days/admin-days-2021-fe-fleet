@@ -44,6 +44,7 @@ const CompanyPresentation = () => {
 
     try {
       await addDoc(collection(db, "registrants"), {
+        userId: userAuth.uid,
         name: nama,
         email: email,
         phoneNumber: noTelp,
