@@ -102,7 +102,7 @@ export const companies = [
       src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FSQnQczfzN6jiIcdvttFK%2FbrochureUrl?alt=media&token=6904716e-cfd3-40b3-b3af-37f676b8d37b",
     },
     image: "/assets/jobfair-ojk.png",
-    website: "ojk.go.id",
+    website: "https://ojk.go.id",
   },
   {
     id: "jNd9uytzkEonriOknTdi",
@@ -142,7 +142,7 @@ export const companies = [
     video:
       "https://drive.google.com/file/d/1ZLTzpGN5duLOGIiwJWpSDjkNeTbZqKNz/view?usp=sharing",
     image: "/assets/jobfair-lkpp.png",
-    website: "www.lkpp.go.id",
+    website: "https://www.lkpp.go.id",
   },
   {
     id: "uXr6oC9yo5ne3M2dRrOb",
@@ -159,7 +159,7 @@ export const companies = [
     facebook: "https://facebook.com/RSMAAJ.ID/",
     youtube: "https://youtube.com/channel/UCDflfrcPT6y7A3Oeo9-9v2w",
     image: "/assets/jobfair-rsm.png",
-    website: "www.rsm.id",
+    website: "https://www.rsm.id",
   },
   {
     id: "v6tnZ8QbfYijxPd3GE1a",
