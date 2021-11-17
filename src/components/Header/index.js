@@ -6,7 +6,6 @@ import { useHistory } from "react-router";
 
 import Dropdown from "./Dropdown";
 import User from "./User";
-import Icon from "../Icon";
 import Modal from "../Modal";
 import Login from "../Login";
 import Logo from "./Logo";
@@ -28,8 +27,10 @@ const Header = ({ separatorHeader, wide }) => {
 
   const history = useHistory();
 
-  const currentPage = pages.filter(
-    (e) => e.url === history.location.pathname
+  const currentPage = pages.filter((e) =>
+    e.url === "/"
+      ? e.url === history.location.pathname
+      : history.location.pathname.startsWith(e.url)
   )[0]?.title;
 
   return (
@@ -45,13 +46,11 @@ const Header = ({ separatorHeader, wide }) => {
           <Link className={styles.logo} to="/">
             <Logo />
           </Link>
+
           <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
             <Dropdown
               className={styles.drowdown}
-              items={pages.filter(
-                (e) =>
-                  e.id !== "jf" || e.id !== "gc"
-              )}
+              items={pages.filter((e) => e.id !== "gc")}
               title={currentPage}
               setValue={setVisibleNav}
             />
@@ -70,7 +69,6 @@ const Header = ({ separatorHeader, wide }) => {
                   if (result === "Sign Out Success") {
                     setUserAuth(null);
                   }
-
                   alert(result);
                 });
               }}
