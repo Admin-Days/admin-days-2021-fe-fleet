@@ -37,9 +37,7 @@ const Signup = () => {
     const confirmPassword = e.target[5].value;
 
     const ikm = e.target[6].files[0];
-    const ipk = e.target[7].files[0];
-    const cv = e.target[8].files[0];
-
+    
     if (password !== confirmPassword) {
       alert("Password do not match!");
       return;
