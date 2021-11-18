@@ -59,7 +59,7 @@ const CompanyVisit = () => {
         }}
       >
         <img
-          src="/assets/icons/whatsapp.png"
+          src="/assets/whatsapp.png"
           alt="Whatsapp"
           style={{ marginRight: "12px" }}
         />

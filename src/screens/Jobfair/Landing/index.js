@@ -37,7 +37,7 @@ const JobfairLanding = () => {
           color: "#FFFFFF",
         }}
       >
-        <img src="/assets/icons/whatsapp.png" alt="Whatsapp" style={{ marginRight: "12px" }} />
+        <img src="/assets/whatsapp.png" alt="Whatsapp" style={{ marginRight: "12px" }} />
         Contact Person
       </a>
     </>
