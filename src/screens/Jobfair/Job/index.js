@@ -96,7 +96,7 @@ const JobfairJob = () => {
             <div className={styles.icons}>
               {companyData.linkedin && (
                 <a target="_blank" rel="noreferrer" href={companyData.linkedin}>
-                  <img src="/assets/icons/linkedin.png" alt="linkedin" />
+                  <img src="/assets/linkedin.png" alt="linkedin" />
                 </a>
               )}
 
@@ -106,19 +106,19 @@ const JobfairJob = () => {
                   rel="noreferrer"
                   href={companyData.instagram}
                 >
-                  <img src="/assets/icons/instagram.png" alt="instagram" />
+                  <img src="/assets/instagram.png" alt="instagram" />
                 </a>
               )}
 
               {companyData.twitter && (
                 <a target="_blank" rel="noreferrer" href={companyData.twitter}>
-                  <img src="/assets/icons/twitter.png" alt="twitter" />
+                  <img src="/assets/twitter.png" alt="twitter" />
                 </a>
               )}
 
               {companyData.youtube && (
                 <a target="_blank" rel="noreferrer" href={companyData.youtube}>
-                  <img src="/assets/icons/youtube.png" alt="youtube" />
+                  <img src="/assets/youtube.png" alt="youtube" />
                 </a>
               )}
             </div>
