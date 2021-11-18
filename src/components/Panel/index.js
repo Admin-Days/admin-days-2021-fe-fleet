@@ -31,7 +31,7 @@ const Panel = ({
   onSearch,
   classButtonSearch,
   icon = "search",
-  onButtonClick = onSearch,
+  onButtonClick,
   classButton = classButtonSearch,
 }) => {
   return (
@@ -52,14 +52,18 @@ const Panel = ({
           ))}
         </div>
       )}
+
       <div className={cn(classBody, styles.body)}>
         {children}
-        <button
-          className={cn(classButton, styles.search)}
-          onClick={onButtonClick}
-        >
-          <Icon name={icon} size="24" />
-        </button>
+
+        {onButtonClick && (
+          <button
+            className={cn(classButton, styles.search)}
+            onClick={onButtonClick}
+          >
+            <Icon name={icon} size="24" />
+          </button>
+        )}
       </div>
     </div>
   );
