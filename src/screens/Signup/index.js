@@ -53,21 +53,11 @@ const Signup = () => {
 
         await updateUserData(name, phoneNumber);
 
-        let ikmLink, ipkLink, cvLink;
+        let ikmLink;
 
         await uploadBytes(ref(storage, `ikm/${email}-${Date.now()}`), ikm).then(
           (snapshot) => {
             getDownloadURL(snapshot.ref).then((link) => (ikmLink = link));
-          }
-        );
-        await uploadBytes(ref(storage, `ipk/${email}-${Date.now()}`), ipk).then(
-          (snapshot) => {
-            getDownloadURL(snapshot.ref).then((link) => (ipkLink = link));
-          }
-        );
-        await uploadBytes(ref(storage, `cv/${email}-${Date.now()}`), cv).then(
-          async (snapshot) => {
-            await getDownloadURL(snapshot.ref).then((link) => (cvLink = link));
           }
         );
 
@@ -78,8 +68,6 @@ const Signup = () => {
             phoneNumber: phoneNumber,
             name: name,
             ikm: ikmLink,
-            ipk: ipkLink,
-            cv: cvLink,
           });
           setSignUpSuccess(true);
           setSignUpLoading(false);
@@ -148,26 +136,6 @@ const Signup = () => {
               <input
                 type="file"
                 name="ikm"
-                accept=".png, .jpg, .jpeg, .pdf"
-                required
-              />
-            </div>
-
-            <div class={styles.fileContainer}>
-              <h3 className={styles.files}>Bukti IPK</h3>
-              <input
-                type="file"
-                name="ipk"
-                accept=".png, .jpg, .jpeg, .pdf"
-                required
-              />
-            </div>
-
-            <div class={styles.fileContainer}>
-              <h3 className={styles.files}>CV</h3>
-              <input
-                type="file"
-                name="cv"
                 accept=".png, .jpg, .jpeg, .pdf"
                 required
               />
