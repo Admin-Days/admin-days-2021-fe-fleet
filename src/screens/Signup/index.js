@@ -37,7 +37,7 @@ const Signup = () => {
     const confirmPassword = e.target[5].value;
 
     const ikm = e.target[6].files[0];
-    
+
     if (password !== confirmPassword) {
       alert("Password do not match!");
       return;
@@ -51,24 +51,24 @@ const Signup = () => {
 
         await updateUserData(name, phoneNumber);
 
-        let ikmLink;
-
-        await uploadBytes(ref(storage, `ikm/${email}-${Date.now()}`), ikm).then(
-          (snapshot) => {
-            getDownloadURL(snapshot.ref).then((link) => (ikmLink = link));
-          }
-        );
-
         try {
-          await addDoc(collection(db, "users"), {
-            userId: user.uid,
-            email: email,
-            phoneNumber: phoneNumber,
-            name: name,
-            ikm: ikmLink,
+          await uploadBytes(
+            ref(storage, `ikm/${email}-${Date.now()}`),
+            ikm
+          ).then((snapshot) => {
+            getDownloadURL(snapshot.ref).then(async (link) => {
+              await addDoc(collection(db, "users"), {
+                userId: user.uid,
+                email: email,
+                phoneNumber: phoneNumber,
+                name: name,
+                ikm: link,
+              });
+
+              setSignUpSuccess(true);
+              setSignUpLoading(false);
+            });
           });
-          setSignUpSuccess(true);
-          setSignUpLoading(false);
         } catch (e) {
           setSignUpLoading(false);
           alert("Sign up failed!e");
