@@ -142,13 +142,6 @@ const CompanyPresentation = () => {
             </div>
 
             <div className={styles.sessionLogoContainer}>
-              <div className={styles.logoContainer}>
-                <img
-                  className={styles.logo}
-                  src="https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2Fjatis%20mobile.png?alt=media&token=c228e864-fbdb-4d0d-84ba-482ec9e435a0"
-                  alt="Logo Jatis Mobile"
-                />
-              </div>
 
               <div className={styles.logoContainer}>
                 <img
@@ -177,7 +170,7 @@ const CompanyPresentation = () => {
               <div className={styles.logoContainer}>
                 <img
                   className={styles.logo}
-                  src="https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FuXr6oC9yo5ne3M2dRrOb%2FlogoUrl?alt=media&token=4e6d4573-6ad5-4e21-a3f4-8972b94e9080"
+                  src="https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FuXr6oC9yo5ne3M2dRrOb%2FlogoUrl?alt=media&token=e72a4450-e24b-4f8c-94d1-a2e129316baa"
                   alt="Logo RSM"
                 />
               </div>
