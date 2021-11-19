@@ -148,7 +148,7 @@ export const companies = [
     id: "uXr6oC9yo5ne3M2dRrOb",
     name: "RSM Indonesia",
     logoUrl: {
-      src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FuXr6oC9yo5ne3M2dRrOb%2FlogoUrl?alt=media&token=4e6d4573-6ad5-4e21-a3f4-8972b94e9080",
+      src: "https://firebasestorage.googleapis.com/v0/b/adm-days.appspot.com/o/companies%2FuXr6oC9yo5ne3M2dRrOb%2FlogoUrl?alt=media&token=e72a4450-e24b-4f8c-94d1-a2e129316baa",
     },
     address: "Plaza Asia Lt 10, Jl Jend Sudirman Kav 59, Jakarta 12190",
     description:
