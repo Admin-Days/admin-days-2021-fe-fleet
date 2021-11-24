@@ -20,12 +20,12 @@ import CompanyVisit from "./screens/Jobfair/CompanyVisit";
 import CompanyPresentation from "./screens/Jobfair/CompanyPresentation";
 import Company from "./screens/Jobfair/Company";
 
-
 import { AuthWrapper } from "./contexts/AuthContext";
 
 import firebaseConfig from "./utils/firebaseConfig";
 import { initializeApp } from "firebase/app";
 import { getAuth, signInAnonymously } from "firebase/auth";
+import GrandClosing from "./screens/GrandClosing";
 initializeApp(firebaseConfig);
 const auth = getAuth();
 signInAnonymously(auth);
@@ -51,6 +51,16 @@ function App() {
             render={() => (
               <Page>
                 <GrandOpening />
+              </Page>
+            )}
+          />
+
+          <Route
+            exact
+            path="/grand-closing"
+            render={() => (
+              <Page>
+                <GrandClosing />
               </Page>
             )}
           />
