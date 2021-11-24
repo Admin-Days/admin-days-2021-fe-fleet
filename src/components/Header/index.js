@@ -50,7 +50,7 @@ const Header = ({ separatorHeader, wide }) => {
           <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
             <Dropdown
               className={styles.drowdown}
-              items={pages.filter((e) => e.id !== "gc")}
+              items={pages}
               title={currentPage}
               setValue={setVisibleNav}
             />

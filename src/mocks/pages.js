@@ -51,11 +51,11 @@ export const pages = [
     images: "/assets/landing-jobfair-logo.png",
     ilustration: "/assets/landing-businessman-walking.png"
   },
-  // {
-  //   id: "gc",
-  //   title: "Grand Closing",
-  //   url: "/grand-closing",
-  //   icon: "mdHome",
-  //   images: "/assets/landing-grand-closing-logo.png"
-  // },
+  {
+    id: "gc",
+    title: "Grand Closing",
+    url: "/grand-closing",
+    icon: "mdHome",
+    images: "/assets/landing-grand-closing-logo.png"
+  },
 ];
