@@ -14,15 +14,6 @@ export const pages = [
     images: "/assets/landing-grand-opening-logo.png",
     ilustration: "/assets/landing-three-people.png"
   },
-  // {
-  //   id: "jf",
-  //   title: "Jobfair",
-  //   desc: "Job and Internship Fair is one of a series of Administration Days events to accommodate FIA ​​UI students to meet virtually with companies that open job vacancies/internships by the job prospects of the majors at FIA UI. In addition, there are also company presentations through virtual meetings.",
-  //   url: "/jobfair",
-  //   icon: "mdWork",
-  //   images: "/assets/landing-jobfair-logo.png",
-  //   ilustration: "/assets/landing-businessman-walking.png"
-  // },
   {
     id: "wb",
     title: "Webinar",
@@ -50,6 +41,15 @@ export const pages = [
     icon: "mdMessage",
     images: "/assets/landing-cv-clinic-logo.png",
     ilustration: "/assets/landing-businessman-thinking.png"
+  },
+  {
+    id: "jf",
+    title: "Jobfair",
+    desc: "Job and Internship Fair is one of a series of Administration Days events to accommodate FIA ​​UI students to meet virtually with companies that open job vacancies/internships by the job prospects of the majors at FIA UI. In addition, there are also company presentations through virtual meetings.",
+    url: "/jobfair",
+    icon: "mdWork",
+    images: "/assets/landing-jobfair-logo.png",
+    ilustration: "/assets/landing-businessman-walking.png"
   },
   // {
   //   id: "gc",

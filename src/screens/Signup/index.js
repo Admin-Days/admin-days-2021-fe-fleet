@@ -37,8 +37,6 @@ const Signup = () => {
     const confirmPassword = e.target[5].value;
 
     const ikm = e.target[6].files[0];
-    const ipk = e.target[7].files[0];
-    const cv = e.target[8].files[0];
 
     if (password !== confirmPassword) {
       alert("Password do not match!");
@@ -53,36 +51,24 @@ const Signup = () => {
 
         await updateUserData(name, phoneNumber);
 
-        let ikmLink, ipkLink, cvLink;
-
-        await uploadBytes(ref(storage, `ikm/${email}-${Date.now()}`), ikm).then(
-          (snapshot) => {
-            getDownloadURL(snapshot.ref).then((link) => (ikmLink = link));
-          }
-        );
-        await uploadBytes(ref(storage, `ipk/${email}-${Date.now()}`), ipk).then(
-          (snapshot) => {
-            getDownloadURL(snapshot.ref).then((link) => (ipkLink = link));
-          }
-        );
-        await uploadBytes(ref(storage, `cv/${email}-${Date.now()}`), cv).then(
-          async (snapshot) => {
-            await getDownloadURL(snapshot.ref).then((link) => (cvLink = link));
-          }
-        );
-
         try {
-          await addDoc(collection(db, "users"), {
-            userId: user.uid,
-            email: email,
-            phoneNumber: phoneNumber,
-            name: name,
-            ikm: ikmLink,
-            ipk: ipkLink,
-            cv: cvLink,
+          await uploadBytes(
+            ref(storage, `ikm/${email}-${Date.now()}`),
+            ikm
+          ).then((snapshot) => {
+            getDownloadURL(snapshot.ref).then(async (link) => {
+              await addDoc(collection(db, "users"), {
+                userId: user.uid,
+                email: email,
+                phoneNumber: phoneNumber,
+                name: name,
+                ikm: link,
+              });
+
+              setSignUpSuccess(true);
+              setSignUpLoading(false);
+            });
           });
-          setSignUpSuccess(true);
-          setSignUpLoading(false);
         } catch (e) {
           setSignUpLoading(false);
           alert("Sign up failed!e");
@@ -148,26 +134,6 @@ const Signup = () => {
               <input
                 type="file"
                 name="ikm"
-                accept=".png, .jpg, .jpeg, .pdf"
-                required
-              />
-            </div>
-
-            <div class={styles.fileContainer}>
-              <h3 className={styles.files}>Bukti IPK</h3>
-              <input
-                type="file"
-                name="ipk"
-                accept=".png, .jpg, .jpeg, .pdf"
-                required
-              />
-            </div>
-
-            <div class={styles.fileContainer}>
-              <h3 className={styles.files}>CV</h3>
-              <input
-                type="file"
-                name="cv"
                 accept=".png, .jpg, .jpeg, .pdf"
                 required
               />

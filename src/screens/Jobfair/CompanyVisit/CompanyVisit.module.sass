@@ -1,0 +1,61 @@
+@import ../../../styles/helpers
+
+.section
+  background-image: url("./jobfair-company-visit-bg.svg")
+  background-size: contain
+  background-position: top
+  background-repeat: no-repeat
+  h1
+    padding-top: 10vw
+    font-family: DM Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 96px
+    line-height: 96px
+    text-align: center
+    letter-spacing: -0.02em
+    color: #FFFFFF
+    margin-bottom: 20vw
+    +m
+      font-size: 48px
+
+  .back_btn
+    margin-top: 2rem
+    margin-left: 10rem
+    display: flex
+    align-items: center
+    font-family: Jost
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: -0.02em
+    color: #777E90
+    z-index: 100
+    +x
+      margin-left: 4rem
+    +m
+      margin-left: 2rem
+
+  .companies
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    max-width: 90vw
+    margin: auto
+    img
+      cursor: pointer
+      flex: 1 0 21%
+      width: 20vw
+      min-width: 280px
+      margin: 32px
+      max-width: 320px
+      +d
+        min-width: 240px
+        margin: 24px
+        max-width: 280px
+      +t
+        flex: 0 0 auto
+      +m
+        width: 80vw
+        max-width: 300px

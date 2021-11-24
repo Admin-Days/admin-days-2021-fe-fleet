@@ -1,0 +1,115 @@
+@import ../../../../styles/helpers
+
+.container
+  margin-top: 6rem
+
+.carousel
+  margin-bottom: 2rem
+  display: none
+  overflow: hidden
+  padding: 5rem 6rem
+  background: #2B243F
+  border: 2px solid #353945
+  box-sizing: border-box
+  box-shadow: 0px 32px 64px -32px rgba(15, 15, 15, 0.1)
+  border-radius: 24px
+  position: relative
+  +t
+    padding: 4rem
+  +m
+    padding: 3rem
+  +s
+    padding: 2rem
+  h3
+    +jost
+    font-weight: 500
+    font-style: normal
+    font-weight: 500
+    font-size: 2.25rem
+    letter-spacing: -0.01em
+    color: white
+    margin-bottom: 2rem
+  p
+    +poppins
+    font-weight: normal
+    font-size: 1.1rem
+    line-height: 1.5rem
+    color: #777E91
+    max-width: 50%
+    margin-bottom: 1.5rem
+    +d
+      max-width: 30ch
+    +t
+      max-width: 100%
+  .ilustration
+    position: absolute
+    bottom: 0
+    right: 0
+    +t
+      display: none
+  &.active
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.buttonWrapper
+  display: flex
+  width: 100%
+  justify-content: center
+  flex-wrap: wrap
+  column-gap: 0
+  .button
+    margin: 0 20px
+    display: grid
+    grid-template-columns: 32px auto
+    width: fit-content
+    padding: 1rem
+    white-space: nowrap
+    border-radius: 16px
+    border: 1px solid white
+    +m
+      width: 100%
+      margin: 8px 0
+    .icon
+      margin: auto
+    span
+      margin-top: auto
+      margin-bottom: auto
+      margin-left: 1rem
+      text-align: start
+      max-width: 20ch
+      +poppins
+      font-style: normal
+      font-weight: normal
+      font-size: 1rem
+      line-height: 1.5rem
+      color: white
+      +t
+        margin-left: 0.75rem
+    &.active
+      background: #48405F
+      border: none
+
+.nextPrevWrapper
+  display: none
+
+.modalContent
+  display: flex
+  flex-direction: column
+  align-items: center
+  h4
+    text-align: center
+    font-size: 1.8rem
+    margin-bottom: 2rem
+    +jost
+    font-weight: normal
+    +m
+      font-size: 1.7rem
+      margin-bottom: 2rem
+    +a
+      font-size: 1.6rem
+  .button
+    width: 100%
+    max-width: 16rem
+    +a
+      max-width: 12rem

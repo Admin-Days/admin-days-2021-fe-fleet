@@ -25,7 +25,7 @@ const Footer = () => {
         <h4 className={styles.title}>Partnership By</h4>
         <a
           className={styles.partnerLink}
-          href="https://kampusx.com/"
+          href="http://inamart.co.id/"
           target="_blank"
           rel="noreferrer"
         >

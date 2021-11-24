@@ -1,0 +1,214 @@
+@import ../../../styles/helpers
+
+.card
+  width: 100%
+  background: #2B243F
+  border: 2px solid #353945
+  box-sizing: border-box
+  box-shadow: 0px 32px 64px -32px rgba(15, 15, 15, 0.1)
+  border-radius: 24px
+  padding: 4rem
+  margin-bottom: 32px
+  +m
+    padding: 16px
+
+.back_btn
+  display: flex
+  align-items: center
+  font-family: Jost
+  font-style: normal
+  font-weight: 500
+  font-size: 16px
+  line-height: 23px
+  letter-spacing: -0.02em
+  color: #777E90
+
+.row_top
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  +t
+    flex-direction: column-reverse
+    align-items: flex-start
+
+.logo
+  width: 200px
+  margin: 32px 0
+  background: white
+  border-radius: 16px
+  padding: 12px
+
+.icons
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  margin-bottom: 48px
+  +t
+    justify-content: flex-start
+    margin-bottom: 0
+    margin-top: 20px
+  a
+    margin-left: 20px
+    &:first-child
+      margin-left: 0
+
+.row_main
+  display: flex
+  align-items: flex-start
+  +t
+    flex-direction: column
+
+.left
+  padding-right: 32px
+  +t
+    width: 100% !important
+    padding-right: 0
+    padding-bottom: 20px
+
+  h2
+    font-family: DM Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: -0.02em
+    color: #FFFFFF
+
+  p
+    font-family: Jost
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 23px
+    color: #FFFFFF
+    white-space: pre-wrap
+
+.buttonWrapper
+  display: flex
+  margin-top: 24px
+  +m
+    flex-direction: column
+
+  .gap
+    width: 20px
+    height: 0
+
+  a
+    +jost
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 16px
+    text-align: center
+    color: #FCFCFD
+    padding: 16px 20px
+    background: #FF884A
+    border-radius: 24px
+    white-space: nowrap
+    margin-top: 24px
+    min-width: 180px
+
+  button
+    +jost
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 16px
+    text-align: center
+    color: #FCFCFD
+    padding: 12px 16px
+    background: #FF884A
+    border-radius: 24px
+    white-space: nowrap
+    margin-top: 24px
+    min-width: 140px
+    +m
+      width: 100%
+      &:first-child
+        margin-right: 20px
+        +m
+          margin-right: 0
+          &:last-child
+            background: #777E90
+
+.major
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 16px
+  text-align: center
+  color: #FCFCFD
+  padding: 6px 12px
+  background: #777E90
+  border-radius: 24px
+  white-space: nowrap
+
+.right
+  padding-top: 12px
+  width: 50%
+  +t
+    width: 100%
+
+.row_jobs
+  display: flex
+  margin-top: 20px
+  +m
+    flex-direction: column
+
+.job_items
+  padding-right: 32px
+  width: 200px
+  min-width: 200px
+  max-width: 200px
+  +m
+    margin-bottom: 32px
+
+.job_item
+  height: 40px
+  display: flex
+  align-items: center
+  margin-bottom: 12px
+  cursor: pointer
+  &.active
+    .border
+      opacity: 1
+      h3
+        color: white
+
+  .border
+    margin-right: 20px
+    width: 8px
+    height: 100%
+    background: #FF884A
+    border-radius: 4px
+    opacity: 0
+
+    h3
+      font-family: Jost
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 23px
+      color: #777E90
+
+.description
+  h5,p
+    font-family: Jost
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 23px
+    color: #FFFFFF
+
+.description_top
+  display: flex
+  margin-bottom: 20px
+  +m
+    flex-direction: column
+  h5
+    +m
+      margin-bottom: 12px
+      &:first-child
+        margin-right: 32px
+        +m
+          margin-right: 0
