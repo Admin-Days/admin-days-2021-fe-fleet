@@ -19,11 +19,10 @@ import { setDarkMode } from "../../utils/dark";
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
-const GrandClosing = ({location}) => {
-
+const GrandClosing = ({ location }) => {
   // Darkmode
   useEffect(() => {
-    setDarkMode()
+    setDarkMode();
   }, []);
 
   const [visible, setVisible] = useState(false);
@@ -64,7 +63,7 @@ const GrandClosing = ({location}) => {
         }}
       />
 
-      <Speaker/>
+      <Speaker />
 
       <Modal visible={visible} onClose={() => setVisible(false)}>
         <Register onRegister={onRegister} />
@@ -78,7 +77,20 @@ const GrandClosing = ({location}) => {
       </Modal>
 
       <Modal visible={success} onClose={() => setSuccess(false)}>
-        <h1>Successfully Registered!</h1>
+        <div className={styles.success}>
+          <h1>Successfully Registered!</h1>
+
+          <p className={styles.successDescription}>
+            Please join to the Whatsapp group on:
+          </p>
+
+          <a
+            href="https://bit.ly/WebinarSustainableCareer2021"
+            className={styles.successLink}
+          >
+            https://bit.ly/WebinarSustainableCareer2021
+          </a>
+        </div>
       </Modal>
     </>
   );
